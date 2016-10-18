@@ -1,0 +1,19 @@
+/**
+ * Created by chendanni on 16/10/19.
+ */
+@import '../total.scss';
+
+.card {
+  display: flex;
+  width: 340px;
+  flex-direction: column;
+  padding: 24px 14px 24px 14px;
+  margin-top: 40px;
+
+  * {
+    align-self: stretch;
+  }
+  p {
+    margin:0 0 14px 0;
+  }
+}

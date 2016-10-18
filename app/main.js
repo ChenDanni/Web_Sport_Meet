@@ -8,6 +8,7 @@ import {Router, Route, browserHistory} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Login from './components/Login/Login';
+import Register from './components/Register/Register'
 
 injectTapEventPlugin();
 
@@ -15,6 +16,6 @@ injectTapEventPlugin();
 render((
     <Router history={browserHistory}>
         <Route path="/login" components={Login}/>
-
+        <Route path="/register" components={Register}/>
     </Router>
 ),document.getElementById('root'));
