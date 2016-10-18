@@ -8,28 +8,26 @@ import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeP
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import FlatButton from 'material-ui/FlatButton';
 
+import './Navigation.scss'
+
 class Navigation extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
-                <Toolbar>
-                    <ToolbarGroup firstChild = {true}>
-                        <IconButton>
-                            <ActionHome />
-                        </IconButton>
-                        <ToolbarTitle text="Sports Meet" />
-                    </ToolbarGroup>
+            <Toolbar className="navigation">
+                <ToolbarGroup firstChild = {true}>
+                    <IconButton>
+                        <ActionHome />
+                    </IconButton>
+                    <ToolbarTitle text="Sports Meet" />
+                </ToolbarGroup>
+                <ToolbarGroup>
+                    <FlatButton label="LOGIN" href=""/>
+                    <ToolbarSeparator />
+                    <FlatButton label="SIGN UP" href=""/>
+                </ToolbarGroup>
+            </Toolbar>
 
-                    <ToolbarGroup>
-                        <FlatButton label="LOGIN" href=""/>
-                        <a href="">LOGIN</a>
-                        <ToolbarSeparator />
-                        <FlatButton label="SIGN UP" href=""/>
-                        <a href="">SIGN UP</a>
-                    </ToolbarGroup>
-                </Toolbar>
-            </MuiThemeProvider>
         );
     }
 }

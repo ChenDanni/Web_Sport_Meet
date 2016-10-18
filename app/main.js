@@ -7,11 +7,14 @@ import {render} from 'react-dom';
 import {Router, Route, browserHistory} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import Navigation from './components/Navigation/Navigation';
-import LoginCard from './components/LoginCard/LoginCard';
-
+import Login from './components/Login/Login';
 
 injectTapEventPlugin();
 
-render(<Navigation />, document.getElementById('root'));
-render(<LoginCard />, document.getElementById('card'));
+
+render((
+    <Router history={browserHistory}>
+        <Route path="/login" components={Login}/>
+
+    </Router>
+),document.getElementById('root'));

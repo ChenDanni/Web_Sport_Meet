@@ -23,7 +23,19 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'style!css'//添加对样式表的处理
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
             }
+            // {
+            //     test: /\.scss$/,
+            //     loaders: [
+            //         'isomorphic-style-loader',
+            //         'css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]',
+            //         'postcss-loader'
+            //     ]
+            // }
         ]
     },
     devServer: {
