@@ -6,7 +6,11 @@ import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeP
 
 import Navigation from '../Navigation/Navigation'
 import HomeLeftMenu from '../HomeLeftMenu/HomeLeftMenu'
-
+import HomeDataCard from '../HomeDataCard/HomeDataCard'
+import FriendsCard from '../FriendsCard/FriendsCard'
+import GroupCard from '../GroupCard/GroupCard'
+import FollowingCard from '../FollowingCard/FollowingCard'
+import FollowerCard from '../FollowerCard/FollowerCard'
 
 import './Home.scss'
 
@@ -19,7 +23,14 @@ class Home extends Component{
                     <Navigation className="navigation"/>
                     <div>
                         <HomeLeftMenu/>
+                        <FriendsCard/>
+                        <FollowerCard/>
+                        <FollowingCard/>
                     </div>
+                    <HomeDataCard/>
+
+                    <GroupCard/>
+
 
                 </div>
             </MuiThemeProvider>
