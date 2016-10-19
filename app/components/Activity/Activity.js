@@ -9,6 +9,7 @@ import ActivityCard from '../ActivityCard/ActivityCard'
 import MyPublicActivityCard from '../MyPublicActivityCard/MyPublicActivityCard'
 import MyJoinActivityCard from '../MyJoinActivityCard/MyJoinActivityCard'
 import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
+import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import './Activity.scss'
 
 class Activity extends Component{
@@ -23,6 +24,7 @@ class Activity extends Component{
                     <MyPublicActivityCard/>
                     <MyJoinActivityCard/>
                     <ActivityPublicCard/>
+                    <AvtivityInfoCard/>
                 </div>
 
             </MuiThemeProvider>

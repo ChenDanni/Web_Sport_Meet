@@ -17,7 +17,8 @@ import './ActivityPublicCard.scss'
 
 const style={
     width:'450px',
-    height: '500px'
+    // height: '500px',
+    padding: '24px 14px'
 };
 const styles = {
     block: {
@@ -62,7 +63,8 @@ class ActivityPublicCard extends Component{
                         style={styles.radioButton}
                     />
                 </RadioButtonGroup>
-                <RaisedButton label="确认" primary={true} fullWidth={true} />
+                <RaisedButton label="确认" primary={true}/>
+                <RaisedButton label="取消"/>
             </Card>
         );
     }
