@@ -11,6 +11,7 @@ import FriendsCard from '../FriendsCard/FriendsCard'
 import GroupCard from '../GroupCard/GroupCard'
 import FollowingCard from '../FollowingCard/FollowingCard'
 import FollowerCard from '../FollowerCard/FollowerCard'
+import HisroyDataCard from '../HistroyDataCard/HistroyDataCard'
 
 import './Home.scss'
 
@@ -26,10 +27,10 @@ class Home extends Component{
                         <FriendsCard/>
                         <FollowerCard/>
                         <FollowingCard/>
+                        <GroupCard/>
                     </div>
                     <HomeDataCard/>
-
-                    <GroupCard/>
+                    <HisroyDataCard/>
 
 
                 </div>
