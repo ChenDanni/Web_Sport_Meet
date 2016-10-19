@@ -10,6 +10,7 @@ import MyPublicActivityCard from '../MyPublicActivityCard/MyPublicActivityCard'
 import MyJoinActivityCard from '../MyJoinActivityCard/MyJoinActivityCard'
 import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
+import Search from '../Search/Search'
 import './Activity.scss'
 
 class Activity extends Component{
@@ -25,6 +26,7 @@ class Activity extends Component{
                     <MyJoinActivityCard/>
                     <ActivityPublicCard/>
                     <AvtivityInfoCard/>
+                    <Search/>
                 </div>
 
             </MuiThemeProvider>
