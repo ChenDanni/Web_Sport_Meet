@@ -10,6 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register'
 import PersonalInfoSet from './components/PersonalInfoSet/PersonalInfoSet'
+import Home from './components/Home/Home'
 
 injectTapEventPlugin();
 
@@ -19,5 +20,6 @@ render((
         <Route path="/login" components={Login}/>
         <Route path="/register" components={Register}/>
         <Route path="/personal_info_set" components={PersonalInfoSet}/>
+        <Route path="/home" components={Home}/>
     </Router>
 ),document.getElementById('root'));
