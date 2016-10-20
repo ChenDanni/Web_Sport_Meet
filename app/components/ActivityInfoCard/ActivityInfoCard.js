@@ -12,6 +12,7 @@ import {List, ListItem} from 'material-ui/List';
 import DatePicker from 'material-ui/DatePicker';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Avatar from 'material-ui/Avatar';
+import Dialog from 'material-ui/Dialog';
 
 
 import './ActivityInfoCard.scss'

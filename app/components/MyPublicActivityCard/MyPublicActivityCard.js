@@ -12,21 +12,25 @@ import FlatButton from 'material-ui/FlatButton';
 
 import ActivityCardHead from '../ActivityCardHead/ActivityCardHead'
 
-import './MyPublicActivityCard.scss'
+import s from './MyPublicActivityCard.scss'
 
-const style={
-    width:'680px'
+const labelStyle={
+    color:'#9B9B9B'
 };
 
 class MyPublicActivityCard extends Component{
     render(){
         return(
-            <Paper style={style}>
+            <Paper className={s.container}>
                 <ActivityCardHead/>
-                <CardActions>
-                    <FlatButton label="编辑" />
-                    <FlatButton label="删除" />
-                </CardActions>
+                <div className={s.buttons}>
+                    <FlatButton
+                        labelStyle={labelStyle}
+                        label="编辑" />
+                    <FlatButton
+                        labelStyle={labelStyle}
+                        label="删除" />
+                </div>
             </Paper>
         );
     }

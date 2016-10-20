@@ -13,13 +13,8 @@ import DatePicker from 'material-ui/DatePicker';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 
-import './ActivityPublicCard.scss'
+import s from './ActivityPublicCard.scss'
 
-const style={
-    width:'450px',
-    // height: '500px',
-    padding: '24px 14px'
-};
 const styles = {
     block: {
         maxWidth: 250,
@@ -32,24 +27,30 @@ const styles = {
 class ActivityPublicCard extends Component{
     render(){
         return(
-            <Card style={style}>
-                <CardTitle title="发布活动"/>
+            <Card className={s.card}>
+                <p className={s.title}>发布活动</p>
                 <TextField
+                    className={s.text}
                     hintText="活动名称"
-                    floatingLabelText="活动名称"
                     fullWidth={true}
                 /><br/>
                 <TextField
+                    className={s.text}
                     hintText="活动介绍"
-                    floatingLabelText="活动介绍"
                     multiLine={true}
                     fullWidth={true}
-                    rows={3}
+                    rows={4}
                 /><br />
-                <div>
-                    <DatePicker hintText="开始时间" container="inline" />
-                    至
-                    <DatePicker hintText="结束时间" container="inline" />
+                <div className={s.date}>
+                    <DatePicker
+                        className={s.dateSelect}
+                        hintText="开始时间"
+                        container="inline" />
+                    <p>至</p>
+                    <DatePicker
+                        className={s.dateSelect}
+                        hintText="结束时间"
+                        container="inline" />
                 </div>
                 <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
                     <RadioButton
@@ -63,8 +64,14 @@ class ActivityPublicCard extends Component{
                         style={styles.radioButton}
                     />
                 </RadioButtonGroup>
-                <RaisedButton label="确认" primary={true}/>
-                <RaisedButton label="取消"/>
+                <div className={s.buttons}>
+                    <RaisedButton
+                        backgroundColor="#965200"
+                        labelColor="#FFF"
+                        className={s.button}
+                        label="确认"/>
+                    <RaisedButton className={s.button} label="取消"/>
+                </div>
             </Card>
         );
     }

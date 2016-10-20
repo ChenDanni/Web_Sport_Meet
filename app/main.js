@@ -12,6 +12,8 @@ import Register from './components/Register/Register'
 import PersonalInfoSet from './components/PersonalInfoSet/PersonalInfoSet'
 import Home from './components/Home/Home'
 import Activity from './components/Activity/Activity'
+import ActivityPublic from './components/ActivityPublic/ActivityPublic'
+import MyPublicActivity from './components/MyPublicActivity/MyPublicActivity'
 
 import './components/total.scss'
 
@@ -25,5 +27,7 @@ render((
         <Route path="/personal_info_set" components={PersonalInfoSet}/>
         <Route path="/home" components={Home}/>
         <Route path="/activity" components={Activity}/>
+        <Route path="/activity_public" components={ActivityPublic}/>
+        <Route path="/my_public_activity" components={MyPublicActivity}/>
     </Router>
 ),document.getElementById('root'));

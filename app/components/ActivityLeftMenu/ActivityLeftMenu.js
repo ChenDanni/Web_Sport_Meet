@@ -10,6 +10,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+import { Router, Route, Link } from 'react-router';
 import s from './ActivityLeftMenu.scss'
 
 const textStyle = {
@@ -48,15 +49,27 @@ class ActivityLeftMenu extends Component{
 
                 <List className={s.list}>
                     <Divider />
-                    <ListItem primaryText="发布活动"/>
+                    <ListItem>
+                        <Link className={s.link} to="/activity_public">发布活动</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="我的活动"/>
+                    <ListItem>
+                        <Link className={s.link} to="/my_public_activity">我发布的活动</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="我参与的活动"/>
+                    <ListItem>
+                        <Link className={s.link} to="/my_join_activity">我参与的活动</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="组队活动"/>
+                    <ListItem>
+                        <Link className={s.link} to="/activity">组队活动</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="竞赛活动"/>
+                    <ListItem>
+                        <Link className={s.link} to="/activity">竞赛活动</Link>
+                    </ListItem>
+                    <Divider/>
+
 
                 </List>
             </Paper>
