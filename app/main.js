@@ -14,6 +14,7 @@ import Home from './components/Home/Home'
 import Activity from './components/Activity/Activity'
 import ActivityPublic from './components/ActivityPublic/ActivityPublic'
 import MyPublicActivity from './components/MyPublicActivity/MyPublicActivity'
+import MyJoinActivity from './components/MyJoinActivity/MyJoinActivity'
 
 import './components/total.scss'
 
@@ -29,5 +30,6 @@ render((
         <Route path="/activity" components={Activity}/>
         <Route path="/activity_public" components={ActivityPublic}/>
         <Route path="/my_public_activity" components={MyPublicActivity}/>
+        <Route path="/my_join_activity" components={MyJoinActivity}/>
     </Router>
 ),document.getElementById('root'));

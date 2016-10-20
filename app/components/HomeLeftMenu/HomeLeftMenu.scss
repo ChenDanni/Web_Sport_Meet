@@ -1,4 +1,16 @@
-.left-card{
-  width: 200px;
+@import '../total.scss';
+.card{
+  width: 180px;
+  height: 300px;
+}
+.list{
+  margin: 0 auto;
   text-align: center;
+  * {
+    color: #965200;
+  }
+}
+.link {
+  display: inline;
+  text-decoration: none;
 }

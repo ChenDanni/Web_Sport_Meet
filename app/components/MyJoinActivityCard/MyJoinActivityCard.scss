@@ -1,9 +1,12 @@
-.content {
-  width: 680px;
-  height: 150px;
-  margin-left: 16px;
+.container{
+  width:680px;
   margin-bottom: 16px;
 }
-.content:hover{
-  background-color: #9B9B9B;
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #EBEBEB;
+  margin-top: 14px;
 }

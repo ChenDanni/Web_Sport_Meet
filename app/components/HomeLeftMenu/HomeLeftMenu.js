@@ -10,34 +10,40 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+import { Router, Route, Link } from 'react-router';
 import FlatButton from 'material-ui/FlatButton';
 
-import './HomeLeftMenu.scss'
-
-const list_style = {
-    marginTop: '0px',
-    marginBottom: '0px',
-    paddingTop: '0px',
-    paddingBottom: '0px'
-};
+import s from './HomeLeftMenu.scss'
 
 class HomeLeftMenu extends Component{
 
     render(){
         return(
-            <Paper className="left-card">
-                <List style={list_style}>
-                    <ListItem primaryText="运动数据"/>
+            <Paper className={s.card}>
+                <List className={s.list}>
+                    <ListItem>
+                        <Link className={s.link} to="/home">运动数据</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="好友"/>
+                    <ListItem>
+                        <Link className={s.link} to="/friends">好友</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="圈子"/>
+                    <ListItem>
+                        <Link className={s.link} to="/groups">圈子</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="关注"/>
+                    <ListItem>
+                        <Link className={s.link} to="/following">关注</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="粉丝"/>
+                    <ListItem>
+                        <Link className={s.link} to="/follower">粉丝</Link>
+                    </ListItem>
                     <Divider />
-                    <ListItem primaryText="历史数据"/>
+                    <ListItem>
+                        <Link className={s.link} to="/history_data">历史数据</Link>
+                    </ListItem>
 
                 </List>
             </Paper>

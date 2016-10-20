@@ -11,9 +11,9 @@ import MyJoinActivityCard from '../MyJoinActivityCard/MyJoinActivityCard'
 import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import Search from '../Search/Search'
-import s from './MyPublicActivity.scss'
+import s from './MyJoinActivity.scss'
 
-class MyPublicActivity extends Component{
+class MyJoinActivity extends Component{
 
     render(){
         return(
@@ -27,8 +27,8 @@ class MyPublicActivity extends Component{
                     <div className={s.content}>
                         <ActivityLeftMenu/>
                         <div className={s.activities}>
-                            <MyPublicActivityCard/>
-                            <MyPublicActivityCard/>
+                            <MyJoinActivityCard/>
+                            <MyJoinActivityCard/>
                         </div>
                     </div>
 
@@ -39,4 +39,4 @@ class MyPublicActivity extends Component{
     }
 }
 
-export default MyPublicActivity
+export default MyJoinActivity

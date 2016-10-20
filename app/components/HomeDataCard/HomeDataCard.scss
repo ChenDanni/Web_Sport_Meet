@@ -1,4 +1,7 @@
-.data-card{
-  width: 685px;
+.card{
+  width: 680px;
   height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

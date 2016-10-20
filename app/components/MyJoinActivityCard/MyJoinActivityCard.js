@@ -12,20 +12,22 @@ import FlatButton from 'material-ui/FlatButton';
 
 import ActivityCardHead from '../ActivityCardHead/ActivityCardHead'
 
-import './MyJoinActivityCard.scss'
+import s from './MyJoinActivityCard.scss'
 
-const style={
-    width:'680px'
+const labelStyle={
+    color:'#9B9B9B'
 };
 
 class MyJoinActivityCard extends Component{
     render(){
         return(
-            <Paper style={style}>
+            <Paper className={s.container}>
                 <ActivityCardHead/>
-                <CardActions>
-                    <FlatButton label="退出" />
-                </CardActions>
+                <div className={s.buttons}>
+                    <FlatButton
+                        labelStyle={labelStyle}
+                        label="退出" />
+                </div>
             </Paper>
         );
     }
