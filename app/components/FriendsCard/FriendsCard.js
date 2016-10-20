@@ -6,29 +6,53 @@ import React, { Component, PropTypes } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeProvider'
 import Paper from 'material-ui/Paper';
-
 import FlatButton from 'material-ui/FlatButton';
+import AvatarInfo from '../AvatarInfo/AvatarInfo'
 
-import './FriendsCard.scss'
+import s from './FriendsCard.scss'
+
+const infoStyle = {
+    paddingBottom:'10px',
+    paddingTop:'4px'
+};
+
+const buttonStyle = {
+    button:{
+        padding:'0',
+        minWidth:'56px'
+    },
+    labelStyle: {
+        color: '#9B9B9B',
+        fontSize: '12px',
+        padding:'0'
+    }
+};
 
 
 class FriendsCard extends Component{
     render(){
         return(
-            <div className="friends-card-container">
+            <div className={s.card}>
                 <Card>
-                    <CardHeader
-                        className="friends-card-header"
-                        title="好友名"
-                        subtitle="Level.2"
-                        avatar={require("../../icons/avatar1.png")}
-                    />
-                    <CardText>
-                        group description group description group description group
-                    </CardText>
-                    <CardActions>
-                        <FlatButton label="删除" />
-                    </CardActions>
+                    <div className={s.header}>
+                        <AvatarInfo/>
+                    </div>
+
+                    <div>
+                        <CardText style={infoStyle}>
+                            平均步数: 5646
+                        </CardText>
+                        <CardText style={infoStyle}>
+                            最近活动: 一起跑步吧
+                        </CardText>
+                    </div>
+
+                    <div className={s.buttons}>
+                        <FlatButton
+                            style={buttonStyle.button}
+                            labelStyle={buttonStyle.labelStyle}
+                            label="删除" />
+                    </div>
                 </Card>
             </div>
         );
