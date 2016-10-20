@@ -19,7 +19,10 @@ class Home extends Component{
             <MuiThemeProvider>
                 <div>
                     <Navigation/>
-                    <Header/>
+                    <div>
+                        <Header/>
+                    </div>
+
 
                     <div className={s.content}>
                         <HomeLeftMenu/>
