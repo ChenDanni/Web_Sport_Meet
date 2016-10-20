@@ -13,6 +13,8 @@ import PersonalInfoSet from './components/PersonalInfoSet/PersonalInfoSet'
 import Home from './components/Home/Home'
 import Activity from './components/Activity/Activity'
 
+import './components/total.scss'
+
 injectTapEventPlugin();
 
 

@@ -8,16 +8,16 @@ import Navigation from '../Navigation/Navigation'
 import RegisterCard from '../RegisterCard/RegisterCard'
 
 
-import './Register.scss'
+import s from './Register.scss'
 
 class Register extends Component{
 
     render(){
         return(
             <MuiThemeProvider>
-                <div  className="content">
-                    <Navigation className="navigation"/>
-                    <div className="container">
+                <div>
+                    <Navigation/>
+                    <div className={s.container}>
                         <RegisterCard/>
                     </div>
                 </div>

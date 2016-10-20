@@ -22,23 +22,17 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css'//添加对样式表的处理
+                loader: 'style-loader!css-loader?modules'//添加对样式表的处理
             },
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass']
+                loaders: [
+                    'style?modules', 'css?modules', 'sass?modules'
+                ]
             },
             {   test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=50000&name=[path][name].[ext]'
             }
-            // {
-            //     test: /\.scss$/,
-            //     loaders: [
-            //         'isomorphic-style-loader',
-            //         'css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]',
-            //         'postcss-loader'
-            //     ]
-            // }
         ]
     },
     devServer: {
@@ -47,4 +41,4 @@ module.exports = {
         historyApiFallback: true,//不跳转
         inline: true//实时刷新
     }
-}
+};

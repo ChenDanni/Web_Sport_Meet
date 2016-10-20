@@ -10,7 +10,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 
 
-import './RegisterCard.scss'
+import s from './RegisterCard.scss'
 
 const buttonStyle = {
     marginTop: '10px',
@@ -20,7 +20,7 @@ const buttonStyle = {
 class RegisterCard extends Component{
     render(){
         return(
-            <Paper className="card">
+            <Paper className={s.card}>
                 <p>Sign up now!</p>
                 <TextField
                     fullWidth={true}
@@ -36,7 +36,12 @@ class RegisterCard extends Component{
                     type="password"
                     hintText="conform password"
                 /><br />
-                <RaisedButton label="SIGN UP" primary={true} style={buttonStyle} fullWidth={true} />
+                <RaisedButton
+                    backgroundColor="#965200"
+                    labelColor="#FFF"
+                    label="SIGN UP"
+                    style={buttonStyle}
+                    fullWidth={true} />
             </Paper>
 
         );

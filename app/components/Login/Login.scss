@@ -1,3 +1,9 @@
+@import '../total.scss';
+
+body {
+  background-color: $lightBrown;
+}
+
 .container{
   display: flex;
   flex-direction: row;

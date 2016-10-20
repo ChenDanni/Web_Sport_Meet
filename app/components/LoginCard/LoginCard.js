@@ -11,18 +11,19 @@ import Paper from 'material-ui/Paper';
 
 import FlatButton from 'material-ui/FlatButton';
 
-import './LoginCard.scss'
+import s from './LoginCard.scss'
+
 
 const buttonStyle = {
-    marginTop: '10px',
-    marginBottom: '10px'
+    marginTop: '14px',
+    // height: '40px'
 };
 
 class LoginCard extends Component{
     render(){
         return(
-            <Paper className="card">
-                <p>Welcome :D</p>
+            <Paper className={s.card}>
+                <p className={s.cardTitle}>Welcome :D</p>
                 <TextField
                     fullWidth={true}
                     hintText="username"
@@ -32,7 +33,12 @@ class LoginCard extends Component{
                     type="password"
                     hintText="password"
                 /><br />
-                <RaisedButton label="LOGIN" primary={true} style={buttonStyle} fullWidth={true} />
+                <RaisedButton
+                    backgroundColor="#965200"
+                    labelColor="#FFF"
+                    label="LOGIN"
+                    style={buttonStyle}
+                    fullWidth={true} />
                 <RaisedButton label="SIGN UP" style={buttonStyle} fullWidth={true} />
             </Paper>
         );

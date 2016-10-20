@@ -8,19 +8,18 @@ import Navigation from '../Navigation/Navigation'
 import LoginCard from '../LoginCard/LoginCard'
 
 
-import './Login.scss'
+import s from './Login.scss'
 
 class Login extends Component{
 
     render(){
         return(
             <MuiThemeProvider>
-                <div  className="content">
-                    <Navigation className="navigation"/>
-                    <div className="container">
+                <div>
+                    <Navigation/>
+                    <div className={s.container}>
                         <LoginCard/>
                     </div>
-
                 </div>
             </MuiThemeProvider>
         );
