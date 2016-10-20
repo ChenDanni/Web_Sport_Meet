@@ -11,22 +11,31 @@ import MyJoinActivityCard from '../MyJoinActivityCard/MyJoinActivityCard'
 import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import Search from '../Search/Search'
-import './Activity.scss'
+import s from './Activity.scss'
 
 class Activity extends Component{
 
     render(){
         return(
             <MuiThemeProvider>
-                <div className="content">
-                    <Navigation className="navigation"/>
-                    <ActivityLeftMenu/>
-                    <ActivityCard/>
-                    <MyPublicActivityCard/>
-                    <MyJoinActivityCard/>
-                    <ActivityPublicCard/>
-                    <AvtivityInfoCard/>
-                    <Search/>
+                <div>
+                    <Navigation/>
+                    <div className={s.searchContainer}>
+                        <Search/>
+                    </div>
+
+                    <div className={s.content}>
+                        <ActivityLeftMenu/>
+                        <div className={s.activities}>
+                            <ActivityCard/>
+                            <ActivityCard/>
+                            <ActivityCard/>
+                            <ActivityCard/>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
             </MuiThemeProvider>

@@ -10,34 +10,43 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import FlatButton from 'material-ui/FlatButton';
+import s from './ActivityLeftMenu.scss'
 
-import './ActivityLeftMenu.scss'
+const textStyle = {
+    padding: '10px 16px',
+    margin: '0 0',
+    color: '#9B9B9B'
+};
+const titleStyle = {
+    padding: '5px 0',
+    fontSize: '16px'
+};
+const subtitleStyle = {
 
-const list_style = {
-    marginTop: '0px',
-    marginBottom: '0px',
-    paddingTop: '0px',
-    paddingBottom: '0px'
 };
 
 class ActivityLeftMenu extends Component{
 
     render(){
         return(
-            <Paper className="activity-left-card">
+            <Paper className={s.card}>
                 <CardHeader
+                    titleStyle = {titleStyle}
+                    subtitleStyle = {subtitleStyle}
                     title="username"
                     subtitle="Level.2"
                     avatar={require("../../icons/avatar1.png")}
                 />
-                <CardText>
-                    累计参加:
-                </CardText>
-                <CardText>
-                    当前排名:
-                </CardText>
-                <List style={list_style}>
+                <div className={s.info}>
+                    <CardText style={textStyle}>
+                        累计参加: 1
+                    </CardText>
+                    <CardText style={textStyle}>
+                        当前排名: 3245
+                    </CardText>
+                </div>
+
+                <List className={s.list}>
                     <Divider />
                     <ListItem primaryText="发布活动"/>
                     <Divider />

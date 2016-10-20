@@ -12,16 +12,12 @@ import FlatButton from 'material-ui/FlatButton';
 
 import ActivityCardHead from '../ActivityCardHead/ActivityCardHead'
 
-import './ActivityCard.scss'
-
-const style={
-    width:'680px'
-};
+import s from './ActivityCard.scss'
 
 class ActivityCard extends Component{
     render(){
         return(
-            <Paper style={style}>
+            <Paper className={s.content}>
                 <ActivityCardHead/>
             </Paper>
         );

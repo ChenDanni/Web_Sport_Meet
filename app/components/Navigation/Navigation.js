@@ -24,10 +24,12 @@ class Navigation extends Component{
                     <ToolbarTitle
                         style={{color: '#fff'}}
                         text="Sports Meet" />
+                    <Link className={s.link} to="/login">HOME</Link>
+                    <Link className={s.link} to="/login">ACTIVITIES</Link>
+                    <Link className={s.link} to="/login">GROUPS</Link>
                 </ToolbarGroup>
                 <ToolbarGroup className={s.linkGroup}>
                     <Link className={s.link} to="/login">LOGIN</Link>
-
                     <Link className={s.link} to="/register">SIGN UP</Link>
                 </ToolbarGroup>
             </Toolbar>

@@ -1,3 +1,17 @@
-.activity-left-card{
-  width: 200px;
+@import '../total.scss';
+.card{
+  width: 180px;
+  height: 394px;
 }
+.list{
+  margin: 0 auto;
+  text-align: center;
+  * {
+    color: #965200;
+  }
+}
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
