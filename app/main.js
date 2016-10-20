@@ -17,11 +17,13 @@ import MyPublicActivity from './components/MyPublicActivity/MyPublicActivity'
 import MyJoinActivity from './components/MyJoinActivity/MyJoinActivity'
 import Friends from './components/Friends/Friends'
 import Groups from './components/Groups/Groups'
+import Followings from './components/Followings/Followings'
+import Followers from './components/Followers/Followers'
+import HistoryData from './components/HistoryData/HistoryData'
 
 import './components/total.scss'
 
 injectTapEventPlugin();
-
 
 render((
     <Router history={browserHistory}>
@@ -35,6 +37,8 @@ render((
         <Route path="/my_join_activity" components={MyJoinActivity}/>
         <Route path="/friends" components={Friends}/>
         <Route path="/groups" components={Groups}/>
-
+        <Route path="/followings" components={Followings}/>
+        <Route path="/followers" components={Followers}/>
+        <Route path="/history_data" components={HistoryData}/>
     </Router>
 ),document.getElementById('root'));

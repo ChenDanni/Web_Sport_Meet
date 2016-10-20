@@ -1,0 +1,24 @@
+.cards {
+  width: 696px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card1{
+  width: 332px;
+  height: 332px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.card2{
+  width: 680px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

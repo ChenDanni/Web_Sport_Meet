@@ -34,11 +34,11 @@ class HomeLeftMenu extends Component{
                     </ListItem>
                     <Divider />
                     <ListItem>
-                        <Link className={s.link} to="/following">关注</Link>
+                        <Link className={s.link} to="/followings">关注</Link>
                     </ListItem>
                     <Divider />
                     <ListItem>
-                        <Link className={s.link} to="/follower">粉丝</Link>
+                        <Link className={s.link} to="/followers">粉丝</Link>
                     </ListItem>
                     <Divider />
                     <ListItem>
