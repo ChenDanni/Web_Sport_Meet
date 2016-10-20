@@ -16,6 +16,7 @@ import ActivityPublic from './components/ActivityPublic/ActivityPublic'
 import MyPublicActivity from './components/MyPublicActivity/MyPublicActivity'
 import MyJoinActivity from './components/MyJoinActivity/MyJoinActivity'
 import Friends from './components/Friends/Friends'
+import Groups from './components/Groups/Groups'
 
 import './components/total.scss'
 
@@ -33,5 +34,7 @@ render((
         <Route path="/my_public_activity" components={MyPublicActivity}/>
         <Route path="/my_join_activity" components={MyJoinActivity}/>
         <Route path="/friends" components={Friends}/>
+        <Route path="/groups" components={Groups}/>
+
     </Router>
 ),document.getElementById('root'));

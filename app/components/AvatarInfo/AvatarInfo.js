@@ -6,7 +6,7 @@ import Avatar from 'material-ui/Avatar';
 
 import s from './AvatarInfo.scss'
 
-const levelStyle = {
+const subtitleStyle = {
     fontSize: '14px',
     color: '#9B9B9B',
     marginTop: '8px'
@@ -18,8 +18,8 @@ class AvatarInfo extends Component {
             <div className={s.avatar}>
                 <Avatar src={require("../../icons/avatar1.png")}/>
                 <div className={s.info}>
-                    <p>username</p>
-                    <p style={levelStyle}>level.3</p>
+                    <p>name</p>
+                    <p style={subtitleStyle}>level.3</p>
                 </div>
             </div>
         );
