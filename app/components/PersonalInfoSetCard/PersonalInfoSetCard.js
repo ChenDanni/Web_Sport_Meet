@@ -11,7 +11,7 @@ import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import {List, ListItem} from 'material-ui/List';
 
-import './PersonalInforSetCard.scss'
+import s from './PersonalInforSetCard.scss'
 
 const buttonStyle = {
     marginTop: '10px',
@@ -21,10 +21,10 @@ const buttonStyle = {
 class PersonalInfoSetCard extends Component{
     render(){
         return(
-            <Paper className="card">
-                <div>
+            <Paper className={s.card}>
+                <div className={s.header}>
                     <Avatar src={require("../../icons/avatar1.png")} />
-                    User name
+                    <p>chendanni</p>
                 </div>
                 <TextField
                     fullWidth={true}
@@ -50,7 +50,12 @@ class PersonalInfoSetCard extends Component{
                     fullWidth={true}
                     hintText="所在地"
                 /><br />
-                <RaisedButton label="确认" primary={true} style={buttonStyle} fullWidth={true} />
+                <RaisedButton
+                    label="确认"
+                    backgroundColor="#965200"
+                    labelColor="#FFF"
+                    style={buttonStyle}
+                    fullWidth={true} />
             </Paper>
         );
     }

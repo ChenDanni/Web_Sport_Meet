@@ -6,10 +6,6 @@ import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeP
 import Navigation from '../Navigation/Navigation'
 import ActivityLeftMenu from '../ActivityLeftMenu/ActivityLeftMenu'
 import ActivityCard from '../ActivityCard/ActivityCard'
-import MyPublicActivityCard from '../MyPublicActivityCard/MyPublicActivityCard'
-import MyJoinActivityCard from '../MyJoinActivityCard/MyJoinActivityCard'
-import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
-import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import Search from '../Search/Search'
 import s from './Activity.scss'
 
@@ -33,7 +29,6 @@ class Activity extends Component{
                             <ActivityCard/>
                         </div>
                     </div>
-
                 </div>
 
             </MuiThemeProvider>

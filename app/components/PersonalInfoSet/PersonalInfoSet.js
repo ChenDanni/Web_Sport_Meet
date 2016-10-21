@@ -9,20 +9,18 @@ import PersonalInfoSetCard from '../PersonalInfoSetCard/PersonalInfoSetCard'
 import PersonalInfoCard from '../PersonalInfoCard/PersonalInfoCard'
 import Divider from 'material-ui/Divider';
 
-import './PersonalInfoSet.scss'
+import s from './PersonalInfoSet.scss'
 
 class PersonalInfoSet extends Component{
 
     render(){
         return(
             <MuiThemeProvider>
-                <div  className="content">
-                    <Navigation className="navigation"/>
-                    <div className="container">
+                <div>
+                    <Navigation/>
+                    <div className={s.container}>
                         <PersonalInfoSetCard/>
                     </div>
-                    <PersonalInfoCard/>
-
                 </div>
             </MuiThemeProvider>
         );

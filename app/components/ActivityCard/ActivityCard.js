@@ -16,6 +16,9 @@ import {render} from 'react-dom';
 import $ from 'jquery';
 import s from './ActivityCard.scss'
 
+const labelStyle={
+    color:'#9B9B9B'
+};
 
 class ActivityCard extends Component {
     constructor(props) {
@@ -39,15 +42,16 @@ class ActivityCard extends Component {
         const actions = [
             <FlatButton
                 label="取消"
-                primary={true}
+                labelStyle={labelStyle}
                 onTouchTap={this.handleClose}
             />,
-            <FlatButton
-                label="加入"
-                primary={true}
+            <RaisedButton
+                backgroundColor="#965200"
+                labelColor="#FFF"
+                style={{marginLeft:'16px'}}
                 keyboardFocused={true}
                 onTouchTap={this.handleClose}
-            />,
+                label="参加"/>
         ];
         return (
             <div>
@@ -61,6 +65,7 @@ class ActivityCard extends Component {
                     modal={false}
                     open={this.state.open}
                     onRequestClose={this.handleClose}
+                    autoScrollBodyContent={true}
                 >
                     <ActivityInfoCard/>
                 </Dialog>

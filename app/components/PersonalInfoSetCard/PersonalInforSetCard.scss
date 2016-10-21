@@ -5,19 +5,20 @@
 
 .card {
   display: flex;
-  width: 380px;
+  width: 450px;
   flex-direction: column;
-  padding: 24px 14px 24px 14px;
+  padding: 24px 24px 24px 24px;
   margin-top: 40px;
-
-  .avatar {
-    padding: 0 0;
-  }
 
   * {
     align-self: stretch;
   }
+}
+.header {
+  display: flex;
+  flex-direction: row;
   p {
-    margin:0 0 14px 0;
+    margin-left: 16px;
+    display: inline;
   }
 }

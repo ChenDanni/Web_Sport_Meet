@@ -27,7 +27,7 @@ const styles = {
 class ActivityPublicCard extends Component{
     render(){
         return(
-            <Card className={s.card}>
+            <div className={s.card}>
                 <p className={s.title}>发布活动</p>
                 <TextField
                     className={s.text}
@@ -64,15 +64,7 @@ class ActivityPublicCard extends Component{
                         style={styles.radioButton}
                     />
                 </RadioButtonGroup>
-                <div className={s.buttons}>
-                    <RaisedButton
-                        backgroundColor="#965200"
-                        labelColor="#FFF"
-                        className={s.button}
-                        label="确认"/>
-                    <RaisedButton className={s.button} label="取消"/>
-                </div>
-            </Card>
+            </div>
         );
     }
 }

@@ -1,7 +1,7 @@
 @import '../total.scss';
 .card{
   width: 180px;
-  height: 394px;
+  height: 404px;
 }
 .list{
   margin: 0 auto;
@@ -18,4 +18,9 @@
 .link {
   display: inline;
   text-decoration: none;
+}
+.public {
+  background-color: #D18721;
+  line-height:32px;
+  margin:0;
 }

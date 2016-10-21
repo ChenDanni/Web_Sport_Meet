@@ -27,8 +27,8 @@ injectTapEventPlugin();
 
 render((
     <Router history={browserHistory}>
-        <Route path="/login" components={Login}/>
         <Route path="/register" components={Register}/>
+        <Route path="/login" components={Login}/>
         <Route path="/personal_info_set" components={PersonalInfoSet}/>
         <Route path="/home" components={Home}/>
         <Route path="/activity" components={Activity}/>

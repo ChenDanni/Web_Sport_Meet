@@ -24,7 +24,7 @@ class PersonalInfoCard extends Component{
             <Paper className="card">
                 <div>
                     <Avatar src={require("../../icons/avatar1.png")} />
-                    User name
+                    <p>chendanni</p>
                 </div>
                 <CardText>
                     性别: 女

@@ -12,13 +12,14 @@ import {List, ListItem} from 'material-ui/List';
 import DatePicker from 'material-ui/DatePicker';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Avatar from 'material-ui/Avatar';
+import Divider from 'material-ui/Divider';
 import Dialog from 'material-ui/Dialog';
 
 
-import './ActivityInfoCard.scss'
+import s from './ActivityInfoCard.scss'
 
 const style={
-    width:'450px',
+    width:'580px',
     padding: '24px 14px'
 };
 const styles = {
@@ -30,52 +31,64 @@ const styles = {
     },
 };
 
+const listStyle = {
+    padding:  '0 0px',
+    margin: '0 auto',
+    justifyContent:'center'
+};
+
 class ActivityInfoCard extends Component{
     render(){
         return(
-            <Card style={style}>
+            <div style={style}>
                 <CardTitle title="活动名称" subtitle="来自 chendanni" />
                 <CardText>
-                    活动介绍 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                    Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                    Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                     一起去跑步吧,每天10公里,坚持打卡哦!~
                 </CardText>
                 <CardText>
                     活动时间: 2016年10月20日 至 2016年10月30日
                 </CardText>
+                <Divider/>
                 <CardText>
                     已参与 3 人
                 </CardText>
                 <List>
-                    <ListItem
-                        disabled={true}
-                        leftAvatar={
-                            <Avatar src={require("../../icons/avatar1.png")} />
-                        }
-                    >
-                        User1
+                    <ListItem style={listStyle}>
+                        <div className={s.item}>
+                            <p>头像</p>
+                            <p>用户</p>
+                            <p>平均步数</p>
+                        </div>
                     </ListItem>
-                    <ListItem
-                        disabled={true}
-                        leftAvatar={
-                            <Avatar src={require("../../icons/avatar1.png")} />
-                        }
-                    >
-                        User2
+                    <ListItem style={listStyle}>
+                        <div className={s.item}>
+                            <div>
+                                <Avatar src={require("../../icons/avatar1.png")} />
+                            </div>
+                            <p>user1</p>
+                            <p>65755</p>
+                        </div>
                     </ListItem>
-                    <ListItem
-                        disabled={true}
-                        leftAvatar={
-                            <Avatar src={require("../../icons/avatar1.png")} />
-                        }
-                    >
-                        User3
+                    <ListItem style={listStyle}>
+                        <div className={s.item}>
+                            <div>
+                                <Avatar src={require("../../icons/avatar1.png")} />
+                            </div>
+                            <p>user2</p>
+                            <p>6575</p>
+                        </div>
+                    </ListItem>
+                    <ListItem style={listStyle}>
+                        <div className={s.item}>
+                            <div>
+                                <Avatar src={require("../../icons/avatar1.png")} />
+                            </div>
+                            <p>user3</p>
+                            <p>15</p>
+                        </div>
                     </ListItem>
                 </List>
-
-                <RaisedButton label="加入" primary={true}/>
-            </Card>
+            </div>
         );
     }
 }
