@@ -20,6 +20,7 @@ import Groups from './components/Groups/Groups'
 import Followings from './components/Followings/Followings'
 import Followers from './components/Followers/Followers'
 import HistoryData from './components/HistoryData/HistoryData'
+import GroupCenter from './components/GroupCenter/GroupCenter'
 
 import './components/total.scss'
 
@@ -40,5 +41,6 @@ render((
         <Route path="/followings" components={Followings}/>
         <Route path="/followers" components={Followers}/>
         <Route path="/history_data" components={HistoryData}/>
+        <Route path="/groups_center" components={GroupCenter}/>
     </Router>
 ),document.getElementById('root'));

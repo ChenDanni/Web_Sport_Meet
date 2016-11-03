@@ -26,7 +26,7 @@ class Navigation extends Component{
                         text="Sports Meet" />
                     <Link className={s.link} to="/home">HOME</Link>
                     <Link className={s.link} to="/activity">ACTIVITIES</Link>
-                    <Link className={s.link} to="/login">GROUPS</Link>
+                    <Link className={s.link} to="/groups_center">GROUPS</Link>
                 </ToolbarGroup>
                 <ToolbarGroup className={s.linkGroup}>
                     <Link className={s.link} to="/login">LOGIN</Link>
