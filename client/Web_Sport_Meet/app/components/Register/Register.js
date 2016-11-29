@@ -6,6 +6,7 @@ import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeP
 
 import Navigation from '../Navigation/Navigation'
 import RegisterCard from '../RegisterCard/RegisterCard'
+import {newTheme} from '../../theme'
 
 
 import s from './Register.scss'
@@ -14,7 +15,7 @@ class Register extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.container}>

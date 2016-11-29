@@ -12,12 +12,13 @@ import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import Search from '../Search/Search'
 import s from './ActivityPublic.scss'
+import {newTheme} from '../../theme'
 
 class ActivityPublic extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.searchContainer}>

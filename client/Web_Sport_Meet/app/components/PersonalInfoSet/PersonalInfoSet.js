@@ -8,6 +8,7 @@ import Navigation from '../Navigation/Navigation'
 import PersonalInfoSetCard from '../PersonalInfoSetCard/PersonalInfoSetCard'
 import PersonalInfoCard from '../PersonalInfoCard/PersonalInfoCard'
 import Divider from 'material-ui/Divider';
+import {newTheme} from '../../theme'
 
 import s from './PersonalInfoSet.scss'
 
@@ -15,7 +16,7 @@ class PersonalInfoSet extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.container}>

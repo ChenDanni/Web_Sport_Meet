@@ -8,12 +8,13 @@ import ActivityLeftMenu from '../ActivityLeftMenu/ActivityLeftMenu'
 import ActivityCard from '../ActivityCard/ActivityCard'
 import Search from '../Search/Search'
 import s from './Activity.scss'
+import {newTheme} from '../../theme'
 
 class Activity extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.searchContainer}>
