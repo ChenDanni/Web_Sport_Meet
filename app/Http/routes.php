@@ -29,3 +29,9 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+Route::group(['prefix' => '/test/'], function () {
+    Route::get('test','TestController@test');
+});
+Route::group(['middleware' => 'api_header', 'prefix' => '/activity/'], function () {
+    Route::get('left_info','ActivityController@left_info');
+});

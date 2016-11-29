@@ -9,8 +9,25 @@ import ActivityCard from '../ActivityCard/ActivityCard'
 import Search from '../Search/Search'
 import s from './Activity.scss'
 import {newTheme} from '../../theme'
+import $ from 'jquery';
 
 class Activity extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            left_info: ""
+        }
+    }
+    async componentDidMount() {
+        let left_info = {"username":"jhsjag"};
+
+        $.ajax('http://localhost:1024/public/activity/left_info', {async: false})
+            .done(((left_data) => {
+                left_info = left_data;
+            }).bind(this));
+        this.setState({left_info:left_info});
+    }
 
     render(){
         return(
@@ -22,7 +39,9 @@ class Activity extends Component{
                     </div>
 
                     <div className={s.content}>
-                        <ActivityLeftMenu/>
+                        <ActivityLeftMenu
+                           left_info = {this.state.left_info}
+                        />
                         <div className={s.activities}>
                             <ActivityCard/>
                             <ActivityCard/>

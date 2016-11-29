@@ -54,6 +54,7 @@ class ActivityLeftMenu extends Component{
     };
 
     render(){
+        let left_info = this.props.left_info;
         const actions = [
             <FlatButton
                 label="取消"
@@ -74,16 +75,17 @@ class ActivityLeftMenu extends Component{
                 <CardHeader
                     titleStyle = {titleStyle}
                     subtitleStyle = {subtitleStyle}
-                    title="username"
-                    subtitle="Level.2"
-                    avatar={require("../../icons/avatar1.png")}
+                    title={left_info.username}
+                    subtitle={"Level." + left_info.level}
+                    //avatar={require("../../icons/avatar1.png")}
+                    avatar={left_info.avatar}
                 />
                 <div className={s.info}>
                     <CardText style={textStyle}>
-                        累计参加: 1
+                        累计参加: {left_info.total}
                     </CardText>
                     <CardText style={textStyle}>
-                        本周平均步数: 3245
+                        本周平均步数: {left_info.avg}
                     </CardText>
                     <RaisedButton
                         backgroundColor="#965200"

@@ -15,11 +15,20 @@ module.exports = {
                 test: /\.json$/,
                 loader: "json"
             },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',//在webpack的module部分的loaders里进行配置即可
+            // {
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     loader: 'babel',//在webpack的module部分的loaders里进行配置即可
+            // },
+            { test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
             },
+            // {
+            //     test: /\.jsx$/,
+            //     exclude: /node_modules/,
+            //     loaders: ["babel-loader"]
+            // },
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader?modules'//添加对样式表的处理
