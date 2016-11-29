@@ -1,0 +1,17 @@
+@import '../total.scss';
+.card{
+  width: 180px;
+  height: 350px;
+}
+.list{
+  margin: 0 auto;
+  text-align: center;
+  * {
+    color: #965200;
+  }
+}
+
+.link {
+  display: inline;
+  text-decoration: none;
+}

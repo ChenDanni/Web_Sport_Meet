@@ -1,0 +1,27 @@
+.title {
+  padding:16px;
+  * {
+    display: inline;
+  }
+
+}
+
+.author {
+  font-size: 14px;
+  padding: 0 16px;
+  color: #9B9B9B;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin:0 auto;
+  * {
+    margin: 5px auto;
+  }
+}

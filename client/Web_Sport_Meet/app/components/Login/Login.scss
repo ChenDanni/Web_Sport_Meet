@@ -1,0 +1,13 @@
+@import '../total.scss';
+
+body {
+  background-color: $lightBrown;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  //margin: 0 auto;
+  //padding: 0 0 40px;
+}
