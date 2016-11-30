@@ -22,8 +22,8 @@ class AvatarInfo extends Component {
             <div className={s.avatar}>
                 <Avatar src={this.props.avatar}/>
                 <div className={s.info}>
-                    <p>{this.props.username}</p>
-                    <p style={subtitleStyle}>level.{this.props.level}</p>
+                    <p>{this.props.username} Lv.{this.props.level}</p>
+                    <p style={subtitleStyle}>{this.props.joinat}加入</p>
                 </div>
             </div>
         );

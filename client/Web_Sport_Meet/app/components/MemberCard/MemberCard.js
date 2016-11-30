@@ -6,7 +6,7 @@ import {List, ListItem} from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
-import TopicCard from '../TopicCard/TopicCard'
+import TopicCard from '../GroupComponents/TopicCard/TopicCard'
 import s from'./MemberCard.scss'
 
 class MemberCard extends Component {
