@@ -8,15 +8,20 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 import s from './TopicCard.scss'
 class TopicCard extends Component {
+    constructor(props){
+        super(props);
+    }
     render(){
+        let info = this.props.topic_info;
+        console.log(info);
         return(
             <div className={s.content}>
-                <Avatar src={require("../../icons/avatar1.png")}/>
+                <Avatar src={info.author_avatar}/>
                 <div className={s.topic_info}>
-                    <p>帖子标题</p>
+                    <p>{info.title}</p>
                     <div className={s.footer}>
-                        <p>name</p>
-                        <p>发布时间: 2016-11-3</p>
+                        <p>{info.author}</p>
+                        <p>发布时间: {info.public_time}</p>
                     </div>
                 </div>
             </div>

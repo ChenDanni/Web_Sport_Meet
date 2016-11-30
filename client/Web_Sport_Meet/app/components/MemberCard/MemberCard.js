@@ -11,11 +11,13 @@ import s from'./MemberCard.scss'
 
 class MemberCard extends Component {
     render(){
+        let info = this.props.member_info;
         return(
             <div className={s.content}>
-                <p>1</p>
-                <Avatar src={require("../../icons/avatar1.png")}/>
-                <p>member name</p>
+                <p>{info.rank}</p>
+                <Avatar src={info.avatar}/>
+                <p>{info.username}</p>
+                <p>{info.step}</p>
             </div>
         );
     }

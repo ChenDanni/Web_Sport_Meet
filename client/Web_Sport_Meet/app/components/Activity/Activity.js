@@ -39,6 +39,7 @@ class Activity extends Component{
 
     renderActivityList(){
         return this.state.act_list.map(function(act,i){
+            console.log(this.state.act_list);
             return (
                 <ActivityCard
                     key = {i}

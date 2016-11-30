@@ -46,4 +46,11 @@ Route::group(['middleware' => 'api_header', 'prefix' => '/home/'], function () {
     Route::get('followers','HomeController@followers');
     Route::get('follower_detail','HomeController@follower_detail');
 });
-
+Route::group(['middleware' => 'api_header', 'prefix' => '/groups/'], function () {
+    Route::get('my_groups','GroupController@my_groups');
+    Route::get('my_group_detail','GroupController@my_group_detail');
+});
+Route::group(['middleware' => 'api_header', 'prefix' => '/topics/'], function () {
+    Route::get('group_topics','TopicController@group_topics');
+    Route::get('topic_detail','TopicController@topic_detail');
+});
