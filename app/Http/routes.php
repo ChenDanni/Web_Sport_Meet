@@ -43,5 +43,7 @@ Route::group(['middleware' => 'api_header', 'prefix' => '/activity/'], function 
 Route::group(['middleware' => 'api_header', 'prefix' => '/home/'], function () {
     Route::get('followings','HomeController@followings');
     Route::get('following_detail','HomeController@following_detail');
+    Route::get('followers','HomeController@followers');
+    Route::get('follower_detail','HomeController@follower_detail');
 });
 

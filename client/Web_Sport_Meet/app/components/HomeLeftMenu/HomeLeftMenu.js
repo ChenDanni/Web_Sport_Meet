@@ -29,9 +29,6 @@ class HomeLeftMenu extends Component{
                         <Link className={s.link} to="/friends">动态</Link>
                     </ListItem>
                     <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/groups">圈子</Link>
-                    </ListItem>
                     <Divider />
                     <ListItem>
                         <Link className={s.link} to="/followings">关注</Link>
