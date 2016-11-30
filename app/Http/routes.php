@@ -34,4 +34,14 @@ Route::group(['prefix' => '/test/'], function () {
 });
 Route::group(['middleware' => 'api_header', 'prefix' => '/activity/'], function () {
     Route::get('left_info','ActivityController@left_info');
+    Route::get('act_list','ActivityController@act_list');
+    Route::get('act_detail/{id?}','ActivityController@act_detail');
+    Route::get('public_act_list','ActivityController@public_act_list');
+    Route::get('my_join_act_list','ActivityController@my_join_act_list');
+    Route::get('my_join_act_detail/{id?}','ActivityController@my_join_act_detail');
 });
+Route::group(['middleware' => 'api_header', 'prefix' => '/home/'], function () {
+    Route::get('followings','HomeController@followings');
+    Route::get('following_detail','HomeController@following_detail');
+});
+

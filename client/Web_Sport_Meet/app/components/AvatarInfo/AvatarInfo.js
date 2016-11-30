@@ -13,13 +13,17 @@ const subtitleStyle = {
 };
 
 class AvatarInfo extends Component {
+    constructor(props){
+        super(props);
+    }
+
     render(){
         return(
             <div className={s.avatar}>
-                <Avatar src={require("../../icons/avatar1.png")}/>
+                <Avatar src={this.props.avatar}/>
                 <div className={s.info}>
-                    <p>name</p>
-                    <p style={subtitleStyle}>level.3</p>
+                    <p>{this.props.username}</p>
+                    <p style={subtitleStyle}>level.{this.props.level}</p>
                 </div>
             </div>
         );

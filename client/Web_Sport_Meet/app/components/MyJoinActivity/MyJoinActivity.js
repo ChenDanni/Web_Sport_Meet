@@ -12,8 +12,45 @@ import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import AvtivityInfoCard from '../ActivityInfoCard/ActivityInfoCard'
 import Search from '../Search/Search'
 import s from './MyJoinActivity.scss'
+import $ from 'jquery'
 
 class MyJoinActivity extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            left_info: {},
+            act_list: []
+        }
+    }
+    async componentDidMount() {
+        let left_info = {};
+        let act_list = [];
+
+        $.ajax('http://localhost:1024/public/activity/left_info', {async: false})
+            .done(((left_data) => {
+                left_info = left_data;
+            }).bind(this));
+        this.setState({left_info:left_info});
+
+        $.ajax('http://localhost:1024/public/activity/my_join_act_list', {async: false})
+            .done(((act_data) => {
+                act_list = act_data;
+            }).bind(this));
+        this.setState({act_list:act_list});
+    }
+
+    renderActivityList(){
+        return this.state.act_list.map(function(act,i){
+            return (
+            <MyJoinActivityCard
+                key = {i}
+                act_info = {act}
+                id = {act.id}
+            />
+            )
+        });
+    }
 
     render(){
         return(
@@ -25,10 +62,11 @@ class MyJoinActivity extends Component{
                     </div>
 
                     <div className={s.content}>
-                        <ActivityLeftMenu/>
+                        <ActivityLeftMenu
+                            left_info = {this.state.left_info}
+                        />
                         <div className={s.activities}>
-                            <MyJoinActivityCard/>
-                            <MyJoinActivityCard/>
+                            {this.renderActivityList()}
                         </div>
                     </div>
 

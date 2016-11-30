@@ -9,10 +9,37 @@ import Header from '../Header/Header'
 import HomeLeftMenu from '../HomeLeftMenu/HomeLeftMenu'
 import FollowingCard from '../FollowingCard/FollowingCard'
 
-
+import $ from 'jquery'
 import s from './Followings.scss'
 
 class Followings extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            followings: []
+        }
+    }
+    async componentDidMount() {
+        let followings = [];
+
+        $.ajax('http://localhost:1024/public/home/followings', {async: false})
+            .done(((fo_data) => {
+                followings = fo_data;
+            }).bind(this));
+        this.setState({followings:followings});
+    }
+
+    renderFollowingsList(){
+        return this.state.followings.map(function(fo,i){
+            return (
+            <FollowingCard
+                key = {i}
+                following_info = {fo}
+            />
+            )
+        });
+    }
 
     render(){
         return(
@@ -24,11 +51,7 @@ class Followings extends Component{
                     <div className={s.content}>
                         <HomeLeftMenu/>
                         <div className={s.container}>
-                            <FollowingCard/>
-                            <FollowingCard/>
-                            <FollowingCard/>
-                            <FollowingCard/>
-                            <FollowingCard/>
+                            {this.renderFollowingsList()}
                         </div>
                     </div>
 

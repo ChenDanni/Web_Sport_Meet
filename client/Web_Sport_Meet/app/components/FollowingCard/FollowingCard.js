@@ -29,20 +29,33 @@ const buttonStyle = {
 };
 
 class FollowingCard extends Component{
+
+    constructor(props){
+        super(props);
+    }
+
     render(){
+        let fo = this.props.following_info;
         return(
             <div className={s.card}>
                 <Card>
                     <div className={s.header}>
-                        <AvatarInfo/>
+                        <AvatarInfo
+                            avatar = {fo.avatar}
+                            username = {fo.username}
+                            level = {fo.level}
+                        />
                     </div>
 
                     <div>
                         <CardText style={infoStyle}>
-                            平均步数: 16646
+                            平均步数: {fo.avg}
                         </CardText>
                         <CardText style={infoStyle}>
-                            最近活动: 爬山去吗
+                            最近活动: {fo.recentact}
+                        </CardText>
+                        <CardText style={infoStyle}>
+                            加入时间: {fo.joinat}
                         </CardText>
                     </div>
 

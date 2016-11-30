@@ -12,29 +12,34 @@ import FlatButton from 'material-ui/FlatButton';
 import s from './ActivityCardHead.scss'
 
 class ActivityCardHead extends Component{
+
+    constructor(props) {
+        super(props);
+    }
+
     render(){
+        let act = this.props.act_info;
         return(
             <div>
                 <div className={s.title}>
-                    <p>一起来跑步吧</p>
-                    <p className={s.author}>from ccc</p>
+                    <p>{act.title}</p>
+                    <p className={s.author}>from {act.author}</p>
+                </div>
+                <div className={s.title}>
+                    <p>{act.description}</p>
                 </div>
                 <div className={s.container}>
                     <div className={s.item}>
                         <Avatar src={require("../../icons/avatar1.png")} />
-                        <p>已参与 3 人</p>
+                        <p>已参与 {act.join} 人</p>
                     </div>
                     <div className={s.item}>
                         <Avatar src={require("../../icons/start.jpg")} />
-                        <p>10月20日</p>
+                        <p>{act.start}</p>
                     </div>
                     <div className={s.item}>
                         <Avatar src={require("../../icons/end.jpg")} />
-                        <p>10月30日</p>
-                    </div>
-                    <div className={s.item}>
-                        <Avatar src={require("../../icons/team.jpg")} />
-                        <p>组队</p>
+                        <p>{act.end}</p>
                     </div>
                 </div>
             </div>

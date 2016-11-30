@@ -14,6 +14,7 @@ import FlatButton from 'material-ui/FlatButton';
 import ActivityCardHead from '../ActivityCardHead/ActivityCardHead'
 import JoinActivityInfoCard from '../JoinActivityInfoCard/JoinActivityInfoCard'
 import s from './MyJoinActivityCard.scss'
+import $ from 'jquery'
 
 const labelStyle={
     color:'#9B9B9B'
@@ -28,6 +29,17 @@ class MyJoinActivityCard extends Component{
         };
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
+    }
+
+    async componentDidMount() {
+        let act_detail = {};
+
+        $.ajax('http://localhost:1024/public/activity/my_join_act_detail', {async: false, data:{id: this.props.id}})
+            .done(((act_detail_data) => {
+                act_detail = act_detail_data;
+            }).bind(this));
+        this.setState({act_detail:act_detail});
+
     }
 
     handleOpen() {
@@ -58,7 +70,9 @@ class MyJoinActivityCard extends Component{
                 <Paper
                     onTouchTap={this.handleOpen}
                     className={s.container}>
-                    <ActivityCardHead/>
+                    <ActivityCardHead
+                        act_info = {this.props.act_info}
+                    />
                     <div className={s.buttons}>
                         <FlatButton
                             labelStyle={labelStyle}
@@ -72,7 +86,9 @@ class MyJoinActivityCard extends Component{
                     onRequestClose={this.handleClose}
                     autoScrollBodyContent={true}
                 >
-                    <JoinActivityInfoCard/>
+                    <JoinActivityInfoCard
+                        act_detail = {this.state.act_detail}
+                    />
                 </Dialog>
             </div>
         );

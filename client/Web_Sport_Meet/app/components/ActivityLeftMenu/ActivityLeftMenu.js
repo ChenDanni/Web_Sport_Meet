@@ -14,6 +14,7 @@ import Dialog from 'material-ui/Dialog';
 import { Router, Route, Link } from 'react-router';
 import FlatButton from 'material-ui/FlatButton';
 import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
+import {newTheme} from '../../theme'
 import s from './ActivityLeftMenu.scss'
 
 const textStyle = {
@@ -71,59 +72,61 @@ class ActivityLeftMenu extends Component{
                 label="确认"/>
         ];
         return(
-            <Paper className={s.card}>
-                <CardHeader
-                    titleStyle = {titleStyle}
-                    subtitleStyle = {subtitleStyle}
-                    title={left_info.username}
-                    subtitle={"Level." + left_info.level}
-                    //avatar={require("../../icons/avatar1.png")}
-                    avatar={left_info.avatar}
-                />
-                <div className={s.info}>
-                    <CardText style={textStyle}>
-                        累计参加: {left_info.total}
-                    </CardText>
-                    <CardText style={textStyle}>
-                        本周平均步数: {left_info.avg}
-                    </CardText>
-                    <RaisedButton
-                        backgroundColor="#965200"
-                        labelColor="#FFF"
-                        style={{margin:'8px 14px',
-                        width:'150px'}}
-                        keyboardFocused={true}
-                        onTouchTap={this.handleOpen}
-                        label="发布活动"
+            <MuiThemeProvider muiTheme={newTheme}>
+                <Paper className={s.card}>
+                    <CardHeader
+                        titleStyle = {titleStyle}
+                        subtitleStyle = {subtitleStyle}
+                        title={left_info.username}
+                        subtitle={"Level." + left_info.level}
+                        //avatar={require("../../icons/avatar1.png")}
+                        avatar={left_info.avatar}
                     />
-                    <Dialog
-                        actions={actions}
-                        modal={false}
-                        open={this.state.open}
-                        onRequestClose={this.handleClose}
-                    >
-                        <ActivityPublicCard/>
-                    </Dialog>
-                </div>
+                    <div className={s.info}>
+                        <CardText style={textStyle}>
+                            累计参加: {left_info.total}
+                        </CardText>
+                        <CardText style={textStyle}>
+                            本周平均步数: {left_info.avg}
+                        </CardText>
+                        <RaisedButton
+                            backgroundColor="#965200"
+                            labelColor="#FFF"
+                            style={{margin:'8px 14px',
+                                width:'150px'}}
+                            keyboardFocused={true}
+                            onTouchTap={this.handleOpen}
+                            label="发布活动"
+                        />
+                        <Dialog
+                            actions={actions}
+                            modal={false}
+                            open={this.state.open}
+                            onRequestClose={this.handleClose}
+                        >
+                            <ActivityPublicCard/>
+                        </Dialog>
+                    </div>
 
-                <List className={s.list}>
+                    <List className={s.list}>
 
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/my_public_activity">我发布的活动</Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/my_join_activity">我参与的活动</Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/activity">活动列表</Link>
-                    </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/my_public_activity">我发布的活动</Link>
+                        </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/my_join_activity">我参与的活动</Link>
+                        </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/activity">活动列表</Link>
+                        </ListItem>
 
 
-                </List>
-            </Paper>
+                    </List>
+                </Paper>
+            </MuiThemeProvider>
         );
     }
 }

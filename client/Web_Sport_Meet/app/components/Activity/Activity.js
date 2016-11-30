@@ -16,17 +16,37 @@ class Activity extends Component{
     constructor(props){
         super(props);
         this.state = {
-            left_info: ""
+            left_info: {},
+            act_list: []
         }
     }
     async componentDidMount() {
-        let left_info = {"username":"jhsjag"};
+        let left_info = {};
+        let act_list = [];
 
         $.ajax('http://localhost:1024/public/activity/left_info', {async: false})
             .done(((left_data) => {
                 left_info = left_data;
             }).bind(this));
         this.setState({left_info:left_info});
+
+        $.ajax('http://localhost:1024/public/activity/act_list', {async: false})
+            .done(((act_data) => {
+                act_list = act_data;
+            }).bind(this));
+        this.setState({act_list:act_list});
+    }
+
+    renderActivityList(){
+        return this.state.act_list.map(function(act,i){
+            return (
+                <ActivityCard
+                    key = {i}
+                    act_info = {act}
+                    id = {act.id}
+                />
+            )
+        });
     }
 
     render(){
@@ -43,10 +63,7 @@ class Activity extends Component{
                            left_info = {this.state.left_info}
                         />
                         <div className={s.activities}>
-                            <ActivityCard/>
-                            <ActivityCard/>
-                            <ActivityCard/>
-                            <ActivityCard/>
+                            {this.renderActivityList()}
                         </div>
                     </div>
                 </div>

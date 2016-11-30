@@ -24,10 +24,22 @@ class ActivityCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            open: false,
+            act_detail:{}
         };
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
+    }
+
+    async componentDidMount() {
+        let act_detail = {};
+
+        $.ajax('http://localhost:1024/public/activity/act_detail', {async: false, data:{id: this.props.id}})
+            .done(((act_detail_data) => {
+                act_detail = act_detail_data;
+            }).bind(this));
+        this.setState({act_detail:act_detail});
+
     }
 
     handleOpen() {
@@ -58,7 +70,9 @@ class ActivityCard extends Component {
                 <Paper
                     onTouchTap={this.handleOpen}
                     className={s.content}>
-                    <ActivityCardHead/>
+                    <ActivityCardHead
+                        act_info = {this.props.act_info}
+                    />
                 </Paper>
                 <Dialog
                     actions={actions}
@@ -67,7 +81,9 @@ class ActivityCard extends Component {
                     onRequestClose={this.handleClose}
                     autoScrollBodyContent={true}
                 >
-                    <ActivityInfoCard/>
+                    <ActivityInfoCard
+                        act_detail = {this.state.act_detail}
+                    />
                 </Dialog>
             </div>
 

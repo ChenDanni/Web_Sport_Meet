@@ -19,10 +19,15 @@ const labelStyle={
 };
 
 class MyPublicActivityCard extends Component{
+    constructor(props) {
+        super(props);
+    }
     render(){
         return(
             <Paper className={s.container}>
-                <ActivityCardHead/>
+                <ActivityCardHead
+                    act_info = {this.props.act_info}
+                />
                 <div className={s.buttons}>
                     <FlatButton
                         labelStyle={labelStyle}

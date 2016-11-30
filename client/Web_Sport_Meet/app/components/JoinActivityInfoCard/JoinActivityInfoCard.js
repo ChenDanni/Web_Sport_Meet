@@ -38,19 +38,41 @@ const listStyle = {
 };
 
 class JoinActivityInfoCard extends Component{
+    constructor(props) {
+        super(props);
+    }
+    renderUserList(){
+        return this.props.act_detail.users.map(function(user,i){
+            return (
+                <div key = {i}>
+                    <ListItem style={listStyle}>
+                        <div className={s.item}>
+                            <p>{user.rank}</p>
+                            <div>
+                                <Avatar src={user.avatar} />
+                            </div>
+                            <p>{user.name}</p>
+                            <p>{user.avg}</p>
+                        </div>
+                    </ListItem>
+                </div>
+            )
+        });
+    }
     render(){
+        let detail = this.props.act_detail;
         return(
             <div style={style}>
-                <CardTitle title="活动名称" subtitle="来自 chendanni" />
+                <CardTitle title={detail.title} subtitle={"来自 " + detail.author} />
                 <CardText>
-                    活动介绍 活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍 活动介绍 活动介绍 活动介绍
+                    {detail.description}
                 </CardText>
                 <Divider/>
                 <CardText>
-                    活动时间: 2016年10月20日 至 2016年10月30日
+                    活动时间: {detail.start} 至 {detail.end}
                 </CardText>
                 <CardText>
-                    已参与 3 人
+                    已参与 {detail.join} 人
                 </CardText>
                 <List>
                     <ListItem style={listStyle}>
@@ -61,37 +83,7 @@ class JoinActivityInfoCard extends Component{
                             <p>累计步数</p>
                         </div>
                     </ListItem>
-                    <ListItem style={listStyle}>
-                        <div className={s.item}>
-                            <p>1</p>
-                            <div>
-                                <Avatar src={require("../../icons/avatar1.png")} />
-                            </div>
-                            <p>user1</p>
-                            <p>65755</p>
-                        </div>
-                    </ListItem>
-                    <ListItem style={listStyle}>
-                        <div className={s.item}>
-                            <p>2</p>
-                            <div>
-                                <Avatar src={require("../../icons/avatar1.png")} />
-                            </div>
-                            <p>user2</p>
-                            <p>6575</p>
-                        </div>
-                    </ListItem>
-                    <ListItem style={listStyle}>
-                        <div className={s.item}>
-                            <p>3</p>
-                            <div>
-                                <Avatar src={require("../../icons/avatar1.png")} />
-                            </div>
-                            <p>user3</p>
-                            <p>15</p>
-                        </div>
-                    </ListItem>
-
+                    {this.renderUserList()}
                 </List>
             </div>
         );
