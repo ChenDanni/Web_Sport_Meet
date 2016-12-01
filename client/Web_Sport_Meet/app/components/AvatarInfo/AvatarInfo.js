@@ -20,7 +20,9 @@ class AvatarInfo extends Component {
     render(){
         return(
             <div className={s.avatar}>
-                <Avatar src={this.props.avatar}/>
+                <Avatar
+                    size={40}
+                    src={this.props.avatar}/>
                 <div className={s.info}>
                     <p>{this.props.username} Lv.{this.props.level}</p>
                     <p style={subtitleStyle}>{this.props.joinat}加入</p>

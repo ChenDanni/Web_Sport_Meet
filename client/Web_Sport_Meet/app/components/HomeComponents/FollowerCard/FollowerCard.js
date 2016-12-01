@@ -5,25 +5,33 @@ import React, { Component, PropTypes } from 'react';
 // import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import AvatarInfo from '../../AvatarInfo/AvatarInfo'
-
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 
 import s from './FollowerCard.scss'
 
-const infoStyle = {
-    paddingBottom:'10px',
-    paddingTop:'4px'
-};
-
 const buttonStyle = {
     button:{
-        padding:'0',
-        minWidth:'56px'
+        // padding:'0',
+        height:'40px',
+        // border: 'none',
+        // boxShadow: 'none',
+    },
+    commonButton:{
+        height:'40px',
+        marginRight:'8px'
     },
     labelStyle: {
         color: '#9B9B9B',
-        fontSize: '12px',
-        padding:'0 12px'
+        fontSize: '16px',
+        padding:'0 48px'
+    },
+    commonLabelStyle:{
+        fontSize: '16px',
+        padding:'0 32px',
+        lineHeight:'40px',
+        paddingLeft:'32px',
     }
 };
 
@@ -34,35 +42,35 @@ class FollowerCard extends Component{
     render(){
         let fo = this.props.follower_info;
         return(
-            <div className={s.card}>
-                <Card>
+            <div>
+                <Paper className={s.card}>
                     <div className={s.header}>
                         <AvatarInfo
-                            avatar = {fo.avatar}
+                            avatar = {require("../../../icons/avatar1.png")}
                             username = {fo.username}
                             level = {fo.level}
+                            joinat = {fo.joinat}
                         />
                     </div>
 
-                    <div>
-                        <CardText style={infoStyle}>
-                            平均步数: {fo.avg}
-                        </CardText>
-                        <CardText style={infoStyle}>
-                            最近活动: {fo.recentact}
-                        </CardText>
-                        <CardText style={infoStyle}>
-                            加入时间: {fo.joinat}
-                        </CardText>
+                    <div className={s.info}>
+                        <p>平均步数: {fo.avg}</p>
+                        <p>最近活动: {fo.recentact}</p>
                     </div>
 
                     <div className={s.buttons}>
+                        <RaisedButton
+                            primary = {true}
+                            labelColor="#FFF"
+                            style={buttonStyle.commonButton}
+                            labelStyle={buttonStyle.commonLabelStyle}
+                            label="ta的主页"/>
                         <FlatButton
                             style={buttonStyle.button}
                             labelStyle={buttonStyle.labelStyle}
                             label="关注" />
                     </div>
-                </Card>
+                </Paper>
             </div>
         );
     }

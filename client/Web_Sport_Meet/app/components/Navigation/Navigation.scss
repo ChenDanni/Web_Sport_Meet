@@ -1,14 +1,14 @@
 @import '../total.scss';
 
 .nav {
-  background-color: $darkBrown !important;
+  background-color: $darkBlue !important;
 }
 
 
 .link {
   display: inline;
   text-decoration: none;
-  padding: 20px 0 0 0;
+  //padding: 20px 0 0 0;
   color: $white;
   margin:0 14px;
 }

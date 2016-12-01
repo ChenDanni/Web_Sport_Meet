@@ -1,7 +1,10 @@
 @import '../../components/total.scss';
 
 body {
-  background-color: $lightBrown;
+  //background-color: $lightGray;
+  background-image: url("../../icons/back.png");
+  background-size:100% 250%;
+  background-repeat:no-repeat;
 }
 
 .container{

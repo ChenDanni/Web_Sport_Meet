@@ -1,6 +1,8 @@
 /**
  * Created by chendanni on 16/11/4.
  */
+
+import s from './components/total.scss'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export const darkBrown = '#965200';
@@ -9,6 +11,8 @@ export const brightBrown = '#D18721';
 export const white = '#FFFFFF';
 export const lightGray = '#9B9B9B';
 export const whiteGray = '#EBEBEB';
+export const bluegreen = '#00fbc2';
+export const darkBlue = '#3a3751';
 
 
 export const newTheme = getMuiTheme({
@@ -16,7 +20,8 @@ export const newTheme = getMuiTheme({
     // fontFamily: '\'Segoe UI\', \'HelveticaNeue-Light\', sans-serif'
 
     palette: {
-        primary1Color: darkBrown,
+        // primary1Color: darkBrown,
+        primary1Color: darkBlue,
         primary2Color: lightBrown,
         primary3Color: brightBrown,
         // accent1Color: pinkA200,

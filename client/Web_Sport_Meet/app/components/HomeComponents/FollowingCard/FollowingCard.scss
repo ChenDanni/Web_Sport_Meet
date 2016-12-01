@@ -1,16 +1,26 @@
 .header {
-  padding: 16px;
+  //padding: 16px;
 }
 
 
 .card {
-  width: 600px;
-  margin-right: 16px;
+  width: 694px;
+  //margin-right: 16px;
+  //height:180px;
+  padding: 26px 16px 16px 16px;
   margin-bottom: 16px;
 }
 
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.info {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  p {
+    font-size: 16px;
+  }
 }

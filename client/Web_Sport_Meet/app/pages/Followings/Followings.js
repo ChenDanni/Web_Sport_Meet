@@ -11,6 +11,7 @@ import FollowingCard from '../../components/HomeComponents/FollowingCard/Followi
 
 import $ from 'jquery'
 import s from './Followings.scss'
+import hc from '../../components/homeCommon.scss'
 
 class Followings extends Component{
 
@@ -47,13 +48,15 @@ class Followings extends Component{
                 <div>
                     <Navigation/>
                     <Header/>
-
-                    <div className={s.content}>
-                        <HomeLeftMenu/>
-                        <div className={s.container}>
-                            {this.renderFollowingsList()}
+                    <div className={hc.out}>
+                        <div className={hc.content}>
+                            <HomeLeftMenu/>
+                            <div className={hc.container}>
+                                {this.renderFollowingsList()}
+                            </div>
                         </div>
                     </div>
+
 
                 </div>
             </MuiThemeProvider>

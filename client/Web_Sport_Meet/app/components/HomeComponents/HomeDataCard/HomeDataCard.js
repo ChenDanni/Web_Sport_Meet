@@ -7,18 +7,44 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import Paper from 'material-ui/Paper';
 import ReactEcharts from 'echarts-for-react';
 import s from './HomeDataCard.scss'
+let daydata = {
+    title: {
+        text: '   24小时数据'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20',
+            '21','22','23','0','1','2','3']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name:'步数',
+            type:'line',
+            stack: '总量',
+            data:[0,0,0,0,0,0,0,0, 182, 191, 234, 1233, 0, 3242,3221, 330, 10, 310, 310, 0, 0, 0, 0, 0]
+        }
+    ]
+};
 
-let option = {
+let otherdata = {
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['游泳','散步','跑步','??','???']
-    },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
+        data:['游泳','散步','跑步']
     },
     grid: {
         left: '3%',
@@ -59,26 +85,6 @@ let option = {
             stack: '总量',
             areaStyle: {normal: {}},
             data:[150, 232, 201, 154, 190, 330, 410]
-        },
-        {
-            name:'??',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data:[320, 332, 301, 334, 390, 330, 320]
-        },
-        {
-            name:'???',
-            type:'line',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'top'
-                }
-            },
-            areaStyle: {normal: {}},
-            data:[820, 932, 901, 934, 1290, 1330, 1320]
         }
     ]
 };
@@ -86,11 +92,19 @@ let option = {
 class HomeDataCard extends Component{
     render(){
         return(
-            <Paper className={s.card}>
-                <ReactEcharts
-                    option={option}
-                />
-            </Paper>
+            <div>
+                <Paper className={s.card}>
+                    <ReactEcharts
+                        option={daydata}
+                    />
+                </Paper>
+                <Paper className={s.card}>
+                    <ReactEcharts
+                        option={otherdata}
+                    />
+                </Paper>
+            </div>
+
         );
     }
 }

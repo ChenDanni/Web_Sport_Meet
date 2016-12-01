@@ -34,7 +34,7 @@ class LoginCard extends Component{
                     hintText="password"
                 /><br />
                 <RaisedButton
-                    backgroundColor="#965200"
+                    primary={true}
                     labelColor="#FFF"
                     label="LOGIN"
                     style={buttonStyle}

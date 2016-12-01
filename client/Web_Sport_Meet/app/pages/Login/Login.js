@@ -15,7 +15,11 @@ class Login extends Component{
     render(){
         return(
             <MuiThemeProvider muiTheme={newTheme}>
+
                 <div>
+                    {/*<Image source={require('../../icons/back.png')} style={{backgroundColor:'transparent'}}>*/}
+                        {/*<Text >1111</Text>*/}
+                    {/*</Image>*/}
                     <Navigation/>
                     <div className={s.container}>
                         <LoginCard/>

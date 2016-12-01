@@ -21,15 +21,14 @@ class Home extends Component{
                     <div>
                         <Header/>
                     </div>
-
-                    <div className={s.content}>
-                        <HomeLeftMenu/>
-                        <div className={s.container}>
-                            <HomeDataCard/>
+                    <div className={s.out}>
+                        <div className={s.content}>
+                            <HomeLeftMenu/>
+                            <div className={s.container}>
+                                <HomeDataCard/>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
             </MuiThemeProvider>
         );

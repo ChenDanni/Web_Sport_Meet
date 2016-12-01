@@ -48,18 +48,25 @@ class Header extends Component{
     render(){
         return(
             <div className={s.header}>
-                <div className={s.avatar}>
-                    <Avatar
-                        size={100}
-                        src={require("../../../icons/team.jpg")}/>
-                    <p>24小时数据</p>
+                <div className={s.content}>
+                    <div className={s.avatar}>
+                        <Avatar
+                            size={110}
+                            src={require("../../../icons/avatar1.png")}/>
+
+                    </div>
+                    <div className={s.info}>
+                        <p>ChenDanni</p>
+                        <p>Lv. 3</p>
+                    </div>
+                    {/*<div>*/}
+                    {/*<ReactEcharts*/}
+                    {/*style={style}*/}
+                    {/*option={option1}*/}
+                    {/*/>*/}
+                    {/*</div>*/}
                 </div>
-                <div>
-                    <ReactEcharts
-                        style={style}
-                        option={option1}
-                    />
-                </div>
+
 
             </div>
         );

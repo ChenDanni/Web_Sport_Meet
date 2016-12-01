@@ -8,6 +8,7 @@ import Paper from 'material-ui/Paper';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { Router, Route, Link } from 'react-router';
+import HomeLeftInfo from '../HomeLeftInfo/HomeLeftInfo'
 
 import s from './HomeLeftMenu.scss'
 
@@ -15,27 +16,31 @@ class HomeLeftMenu extends Component{
 
     render(){
         return(
-            <Paper className={s.card}>
-                <List className={s.list}>
-                    <ListItem>
-                        <Link className={s.link} to="/home">运动数据</Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/friends">动态</Link>
-                    </ListItem>
-                    <Divider />
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/followings">关注</Link>
-                    </ListItem>
-                    <Divider />
-                    <ListItem>
-                        <Link className={s.link} to="/followers">粉丝</Link>
-                    </ListItem>
+            <div>
+                <HomeLeftInfo/>
+                <Paper className={s.card}>
+                    <List className={s.list}>
+                        <ListItem>
+                            <Link className={s.link} to="/home">运动数据</Link>
+                        </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/friends">动态</Link>
+                        </ListItem>
+                        <Divider />
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/followings">关注</Link>
+                        </ListItem>
+                        <Divider />
+                        <ListItem>
+                            <Link className={s.link} to="/followers">粉丝</Link>
+                        </ListItem>
 
-                </List>
-            </Paper>
+                    </List>
+                </Paper>
+            </div>
+
         );
     }
 }

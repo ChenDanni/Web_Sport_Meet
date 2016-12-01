@@ -11,6 +11,8 @@ import FollowerCard from '../../components/HomeComponents/FollowerCard/FollowerC
 
 import $ from 'jquery'
 import s from './Followers.scss'
+import hc from '../../components/homeCommon.scss'
+import {newTheme} from '../../theme'
 
 class Followers extends Component{
 
@@ -44,15 +46,16 @@ class Followers extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <Header/>
-
-                    <div className={s.content}>
-                        <HomeLeftMenu/>
-                        <div className={s.container}>
-                            {this.renderFollowersList()}
+                    <div className={hc.out}>
+                        <div className={hc.content}>
+                            <HomeLeftMenu/>
+                            <div className={hc.container}>
+                                {this.renderFollowersList()}
+                            </div>
                         </div>
                     </div>
 

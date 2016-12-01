@@ -8,6 +8,10 @@ import Paper from 'material-ui/Paper';
 import ReactEcharts from 'echarts-for-react';
 import s from './HistoryDataCard.scss'
 
+
+
+
+
 let option1 = {
     title: {
         text: '折线图堆叠'

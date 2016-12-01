@@ -17,6 +17,10 @@ const buttonStyle = {
     padding:'0',
     margin:'auto,0'
 };
+const titleStyle = {
+    color: '#fff',
+    marginLeft: '20px'
+};
 
 class Navigation extends Component{
 
@@ -25,15 +29,15 @@ class Navigation extends Component{
             <Toolbar className={s.nav}>
                 <ToolbarGroup
                     firstChild = {true}>
-                    <IconButton
-                        style={buttonStyle}
-                    >
-                        <ActionHome
-                            color="#ffffff"
-                        />
-                    </IconButton>
+                    {/*<IconButton*/}
+                        {/*style={buttonStyle}*/}
+                    {/*>*/}
+                        {/*<ActionHome*/}
+                            {/*color="#ffffff"*/}
+                        {/*/>*/}
+                    {/*</IconButton>*/}
                     <ToolbarTitle
-                        style={{color: '#fff'}}
+                        style={titleStyle}
                         text="Sports Meet" />
                     <Link className={s.link} to="/home">主页</Link>
                     <Link className={s.link} to="/activity">活动</Link>

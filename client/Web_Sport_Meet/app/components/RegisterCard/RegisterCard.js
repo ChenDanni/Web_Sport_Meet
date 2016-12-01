@@ -37,7 +37,7 @@ class RegisterCard extends Component{
                     hintText="conform password"
                 /><br />
                 <RaisedButton
-                    backgroundColor="#965200"
+                    backgroundColor="#3a3751"
                     labelColor="#FFF"
                     label="SIGN UP"
                     style={buttonStyle}
