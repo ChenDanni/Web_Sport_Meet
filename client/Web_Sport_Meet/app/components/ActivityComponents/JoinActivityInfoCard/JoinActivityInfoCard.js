@@ -42,7 +42,8 @@ class JoinActivityInfoCard extends Component{
                         <div className={s.item}>
                             <p>{user.rank}</p>
                             <div>
-                                <Avatar src={user.avatar} />
+                                {/*<Avatar src={user.avatar} />*/}
+                                <Avatar src={require('../../../icons/avatar1.png')} />
                             </div>
                             <p>{user.name}</p>
                             <p>{user.avg}</p>

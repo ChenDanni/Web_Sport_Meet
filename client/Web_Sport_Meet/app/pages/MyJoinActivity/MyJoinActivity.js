@@ -8,6 +8,7 @@ import ActivityLeftMenu from '../../components/ActivityComponents/ActivityLeftMe
 import MyJoinActivityCard from '../../components/ActivityComponents/MyJoinActivityCard/MyJoinActivityCard'
 import Search from '../../components/Search/Search'
 import s from './MyJoinActivity.scss'
+import {newTheme} from '../../theme'
 import $ from 'jquery'
 
 class MyJoinActivity extends Component{
@@ -50,7 +51,7 @@ class MyJoinActivity extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.searchContainer}>

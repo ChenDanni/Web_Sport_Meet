@@ -7,6 +7,7 @@ import Navigation from '../../components/Navigation/Navigation'
 import ActivityLeftMenu from '../../components/ActivityComponents/ActivityLeftMenu/ActivityLeftMenu'
 import MyPublicActivityCard from '../../components/ActivityComponents/MyPublicActivityCard/MyPublicActivityCard'
 import Search from '../../components/Search/Search'
+import {newTheme} from '../../theme'
 import s from './MyPublicActivity.scss'
 import $ from 'jquery'
 
@@ -51,7 +52,7 @@ class MyPublicActivity extends Component{
 
     render(){
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={newTheme}>
                 <div>
                     <Navigation/>
                     <div className={s.searchContainer}>

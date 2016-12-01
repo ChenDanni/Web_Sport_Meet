@@ -1,7 +1,10 @@
 .title {
-  padding:16px;
+  padding:16px 16px 0px 16px;
   * {
     display: inline;
+  }
+  p {
+    line-height: 30px;
   }
 
 }
@@ -15,6 +18,8 @@
 .container{
   display: flex;
   flex-direction: row;
+  margin-top: 16px;
+  padding-bottom: 16px;
 }
 .item {
   display: flex;

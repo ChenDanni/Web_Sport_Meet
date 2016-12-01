@@ -56,10 +56,9 @@ class ActivityCard extends Component {
                 onTouchTap={this.handleClose}
             />,
             <RaisedButton
-                backgroundColor="#965200"
+                primary={true}
                 labelColor="#FFF"
                 style={{marginLeft:'16px'}}
-                keyboardFocused={true}
                 onTouchTap={this.handleClose}
                 label="参加"/>
         ];

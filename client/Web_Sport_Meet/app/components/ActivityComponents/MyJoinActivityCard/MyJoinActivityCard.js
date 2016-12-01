@@ -19,16 +19,15 @@ const labelStyle={
 };
 
 class MyJoinActivityCard extends Component{
-
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            open: false,
+            act_detail:{}
         };
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
     }
-
     async componentDidMount() {
         let act_detail = {};
 
@@ -39,7 +38,6 @@ class MyJoinActivityCard extends Component{
         this.setState({act_detail:act_detail});
 
     }
-
     handleOpen() {
         this.setState({open: true});
     };
@@ -47,7 +45,6 @@ class MyJoinActivityCard extends Component{
     handleClose() {
         this.setState({open: false});
     };
-
     render(){
         const actions = [
             <FlatButton
@@ -57,7 +54,7 @@ class MyJoinActivityCard extends Component{
                 onTouchTap={this.handleClose}
             />,
             <RaisedButton
-                backgroundColor="#965200"
+                primary={true}
                 labelColor="#FFF"
                 style={{marginLeft:'16px'}}
                 onTouchTap={this.handleClose}
@@ -89,6 +86,7 @@ class MyJoinActivityCard extends Component{
                     />
                 </Dialog>
             </div>
+
         );
     }
 }

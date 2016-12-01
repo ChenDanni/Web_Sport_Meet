@@ -5,11 +5,14 @@ import React, { Component, PropTypes } from 'react';
 // import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
+import Dialog from 'material-ui/Dialog';
+import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-
+import JoinActivityInfoCard from '../JoinActivityInfoCard/JoinActivityInfoCard'
 import ActivityCardHead from '../ActivityCardHead/ActivityCardHead'
 
 import s from './MyPublicActivityCard.scss'
+import $ from 'jquery'
 
 const labelStyle={
     color:'#9B9B9B'
@@ -18,22 +21,76 @@ const labelStyle={
 class MyPublicActivityCard extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+            open: false,
+            act_detail:{}
+        };
+        this.handleOpen = this.handleOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
+    async componentDidMount() {
+        let act_detail = {};
+
+        $.ajax('http://localhost:1024/public/activity/my_join_act_detail', {async: false, data:{id: this.props.id}})
+            .done(((act_detail_data) => {
+                act_detail = act_detail_data;
+            }).bind(this));
+        this.setState({act_detail:act_detail});
+
+    }
+    handleOpen() {
+        this.setState({open: true});
+    };
+
+    handleClose() {
+        this.setState({open: false});
+    };
     render(){
+        const actions = [
+            <FlatButton
+                label="编辑"
+                primary={true}
+                labelStyle={labelStyle}
+                onTouchTap={this.handleClose}
+            />,
+            <RaisedButton
+                primary={true}
+                labelColor="#FFF"
+                style={{marginLeft:'16px'}}
+                onTouchTap={this.handleClose}
+                label="确认"/>
+        ];
         return(
-            <Paper className={s.container}>
-                <ActivityCardHead
-                    act_info = {this.props.act_info}
-                />
-                <div className={s.buttons}>
-                    <FlatButton
-                        labelStyle={labelStyle}
-                        label="编辑" />
-                    <FlatButton
-                        labelStyle={labelStyle}
-                        label="删除" />
-                </div>
-            </Paper>
+            <div>
+                <Paper
+                    onTouchTap={this.handleOpen}
+                    className={s.container}>
+                    <ActivityCardHead
+                        act_info = {this.props.act_info}
+                    />
+                    <div className={s.buttons}>
+                        <FlatButton
+                            labelStyle={labelStyle}
+                            label="编辑" />
+                        <FlatButton
+                            labelStyle={labelStyle}
+                            label="删除" />
+                    </div>
+                </Paper>
+                <Dialog
+                    actions={actions}
+                    modal={false}
+                    open={this.state.open}
+                    onRequestClose={this.handleClose}
+                    autoScrollBodyContent={true}
+                >
+                    <JoinActivityInfoCard
+                        act_detail = {this.state.act_detail}
+                    />
+                </Dialog>
+            </div>
+
+
         );
     }
 }

@@ -9,7 +9,7 @@ export const darkBrown = '#965200';
 export const lightBrown = '#C7801D';
 export const brightBrown = '#D18721';
 export const white = '#FFFFFF';
-export const lightGray = '#9B9B9B';
+export const lightGray = '#fafafa';
 export const whiteGray = '#EBEBEB';
 export const bluegreen = '#00fbc2';
 export const darkBlue = '#3a3751';
@@ -22,7 +22,7 @@ export const newTheme = getMuiTheme({
     palette: {
         // primary1Color: darkBrown,
         primary1Color: darkBlue,
-        primary2Color: lightBrown,
+        primary2Color: darkBlue,
         primary3Color: brightBrown,
         // accent1Color: pinkA200,
         // accent2Color: grey100,

@@ -17,11 +17,7 @@ import ActivityPublicCard from '../ActivityPublicCard/ActivityPublicCard'
 import {newTheme} from '../../../theme'
 import s from './ActivityLeftMenu.scss'
 
-const textStyle = {
-    padding: '10px 16px',
-    margin: '0 0',
-    color: '#9B9B9B'
-};
+
 const titleStyle = {
     padding: '5px 0',
     fontSize: '16px'
@@ -64,10 +60,9 @@ class ActivityLeftMenu extends Component{
                 onTouchTap={this.handleClose}
             />,
             <RaisedButton
-                backgroundColor="#965200"
+                primary={true}
                 labelColor="#FFF"
                 style={{marginLeft:'16px'}}
-                keyboardFocused={true}
                 onTouchTap={this.handleClose}
                 label="确认"/>
         ];
@@ -79,22 +74,18 @@ class ActivityLeftMenu extends Component{
                         subtitleStyle = {subtitleStyle}
                         title={left_info.username}
                         subtitle={"Level." + left_info.level}
-                        //avatar={require("../../icons/avatar1.png")}
-                        avatar={left_info.avatar}
+                        avatar={require("../../../icons/avatar1.png")}
+                        //avatar={left_info.avatar}
                     />
                     <div className={s.info}>
-                        <CardText style={textStyle}>
-                            累计参加: {left_info.total}
-                        </CardText>
-                        <CardText style={textStyle}>
-                            本周平均步数: {left_info.avg}
-                        </CardText>
+                        <div className={s.text}>
+                            <p>累计参加: {left_info.total}</p>
+                            <p>本周平均步数: {left_info.avg}</p>
+                        </div>
                         <RaisedButton
-                            backgroundColor="#965200"
+                            primary={true}
                             labelColor="#FFF"
-                            style={{margin:'8px 14px',
-                                width:'150px'}}
-                            keyboardFocused={true}
+                            style={{width:'100%'}}
                             onTouchTap={this.handleOpen}
                             label="发布活动"
                         />

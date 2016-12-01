@@ -26,9 +26,9 @@ class ActivityController extends Controller {
 
     public function act_list(){
         $id = 1;
-        $title = 'title1';
+        $title = '跑步';
         $author = 'au1';
-        $description = '一起跑步吗';
+        $description = '    爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';
         $join = 2;
         $start = '2016-10-11';
         $end = '2016-12-11';
@@ -68,9 +68,9 @@ class ActivityController extends Controller {
     }
 
     public function act_detail(){
-        $title = 'title1';
+        $title = '跑步';
         $author = 'au1';
-        $description = '一起跑步吗';
+        $description = '爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';;
         $join = 2;
         $start = '2016-10-11';
         $end = '2016-12-11';
@@ -116,9 +116,9 @@ class ActivityController extends Controller {
     }
 
     public function my_join_act_detail(){
-        $title = 'title1';
+        $title = '跑步';
         $author = 'au1';
-        $description = '一起跑步吗';
+        $description = '爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';;
         $join = 2;
         $start = '2016-10-11';
         $end = '2016-12-11';

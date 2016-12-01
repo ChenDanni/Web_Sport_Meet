@@ -15,8 +15,8 @@ import Dialog from 'material-ui/Dialog';
 import s from './ActivityInfoCard.scss'
 
 const style={
-    width:'580px',
-    padding: '24px 14px'
+    width:'100%',
+    padding: '0px'
 };
 const styles = {
     block: {
@@ -44,7 +44,8 @@ class ActivityInfoCard extends Component{
                     <ListItem style={listStyle}>
                         <div className={s.item}>
                             <div>
-                                <Avatar src={user.avatar} />
+                                {/*<Avatar src={user.avatar} />*/}
+                                <Avatar src={require('../../../icons/avatar1.png')} />
                             </div>
                             <p>{user.name}</p>
                             <p>{user.avg}</p>
