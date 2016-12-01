@@ -6,7 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import ReactEcharts from 'echarts-for-react';
-import s from './HistoryDataCard.scss'
+import s from './OthersHistoryDataCard.scss'
 
 let option1 = {
     title: {
@@ -136,7 +136,7 @@ let option3 = {
     }]
 };
 
-class HistoryDataCard extends Component{
+class OthersHistoryDataCard extends Component{
     render(){
         return(
             <div className={s.cards}>
@@ -161,4 +161,4 @@ class HistoryDataCard extends Component{
 }
 
 // export default withStyles(LoginCard,s);
-export default HistoryDataCard
+export default OthersHistoryDataCard

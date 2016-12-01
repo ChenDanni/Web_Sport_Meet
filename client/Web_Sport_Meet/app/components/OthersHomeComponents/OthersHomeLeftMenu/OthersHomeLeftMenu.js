@@ -9,22 +9,25 @@ import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { Router, Route, Link } from 'react-router';
 
-import s from './HomeLeftMenu.scss'
+import s from './OthersHomeLeftMenu.scss'
 
-class HomeLeftMenu extends Component{
+class OthersHomeLeftMenu extends Component{
 
     render(){
         return(
             <Paper className={s.card}>
                 <List className={s.list}>
                     <ListItem>
-                        <Link className={s.link} to="/home">运动数据</Link>
+                        <Link className={s.link} to="/others_home">运动数据</Link>
                     </ListItem>
                     <Divider />
                     <ListItem>
-                        <Link className={s.link} to="/friends">动态</Link>
+                        <Link className={s.link} to="/friends">近期活动</Link>
                     </ListItem>
                     <Divider />
+                    <ListItem>
+                        <Link className={s.link} to="/friends">圈子</Link>
+                    </ListItem>
                     <Divider />
                     <ListItem>
                         <Link className={s.link} to="/followings">关注</Link>
@@ -40,4 +43,4 @@ class HomeLeftMenu extends Component{
     }
 }
 
-export default HomeLeftMenu
+export default OthersHomeLeftMenu

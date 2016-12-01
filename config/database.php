@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,7 +48,8 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => database_path('database.sqlite'),
+            'database' => __DIR__.'/../../../db/sqlite/sports_meet.sqlite',
+//            'database' => database_path('database.sqlite'),
             'prefix'   => '',
         ],
 
@@ -61,7 +62,7 @@ return [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'strict'    => false,
+            'strict'    => true,
             'engine'    => null,
         ],
 
@@ -74,6 +75,9 @@ return [
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
+
+            'port' => env('DB_PORT', '8889'),
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [

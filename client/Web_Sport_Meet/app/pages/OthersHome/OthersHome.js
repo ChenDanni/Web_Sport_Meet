@@ -5,9 +5,9 @@ import React, { Component, PropTypes } from 'react';
 import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeProvider'
 
 import Navigation from '../../components/Navigation/Navigation'
-import Header from '../../components/HomeComponents/Header/Header'
-import HomeLeftMenu from '../../components/HomeComponents/HomeLeftMenu/HomeLeftMenu'
-import HomeDataCard from '../../components/HomeComponents/HomeDataCard/HomeDataCard'
+import HomeLeftMenu from '../../components/OthersHomeComponents/OthersHomeLeftMenu/OthersHomeLeftMenu'
+import OthersHeader from '../../components/OthersHomeComponents/OthersHeader/OthersHeader'
+import OthersHistoryDataCard from '../../components/OthersHomeComponents/OthersHistoryDataCard/OthersHistoryDataCard'
 import s from './OthersHome.scss'
 
 class OthersHome extends Component{
@@ -18,18 +18,16 @@ class OthersHome extends Component{
                 <div>
                     <Navigation/>
                     <div>
-                        <Header/>
+                        <OthersHeader/>
                     </div>
 
 
                     <div className={s.content}>
                         <HomeLeftMenu/>
                         <div className={s.container}>
-                            <HomeDataCard/>
+                            <OthersHistoryDataCard/>
                         </div>
                     </div>
-
-
                 </div>
             </MuiThemeProvider>
         );

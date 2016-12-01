@@ -7,20 +7,21 @@ import {render} from 'react-dom';
 import {Router, Route, browserHistory} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import Login from './components/Login/Login';
-import Register from './components/Register/Register'
-import PersonalInfoSet from './components/PersonalInfoSet/PersonalInfoSet'
-import Home from './components/Home/Home'
-import Activity from './components/Activity/Activity'
-import ActivityPublic from './components/ActivityPublic/ActivityPublic'
-import MyPublicActivity from './components/MyPublicActivity/MyPublicActivity'
-import MyJoinActivity from './components/MyJoinActivity/MyJoinActivity'
-import Friends from './components/Friends/Friends'
-import Groups from './components/Groups/Groups'
-import Followings from './components/Followings/Followings'
-import Followers from './components/Followers/Followers'
-import HistoryData from './components/HistoryData/HistoryData'
-import GroupCenter from './components/GroupCenter/GroupCenter'
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register'
+import PersonalInfoSet from './pages/PersonalInfoSet/PersonalInfoSet'
+import Home from './pages/Home/Home'
+import Activity from './pages/Activity/Activity'
+import ActivityPublic from './pages/ActivityPublic/ActivityPublic'
+import MyPublicActivity from './pages/MyPublicActivity/MyPublicActivity'
+import MyJoinActivity from './pages/MyJoinActivity/MyJoinActivity'
+import Friends from './pages/Friends/Friends'
+import Groups from './pages/Groups/Groups'
+import Followings from './pages/Followings/Followings'
+import Followers from './pages/Followers/Followers'
+import HistoryData from './pages/HistoryData/HistoryData'
+import GroupCenter from './pages/GroupCenter/GroupCenter'
+import OthersHome from './pages/OthersHome/OthersHome'
 
 import './components/total.scss'
 
@@ -42,5 +43,6 @@ render((
         <Route path="/followers" components={Followers}/>
         <Route path="/history_data" components={HistoryData}/>
         <Route path="/groups_center" components={GroupCenter}/>
+        <Route path="/others_home" components={OthersHome}/>
     </Router>
 ),document.getElementById('root'));

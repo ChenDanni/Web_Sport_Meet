@@ -9,7 +9,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Model;
+use App\Models\user;
 
+/**
+ * Class HomeController
+ * @package App\Http\Controllers
+ */
 class HomeController extends Controller {
     public function followings(){
         $avatar = 'ddd';
@@ -33,7 +38,10 @@ class HomeController extends Controller {
     }
 
     public function following_detail(){
-
+        $ret = array();
+        $ret['result'] = Controller::SUCCESS;
+        $ret['content'] = user::findUserByUsername('cdn1');
+        return \Response::json($ret);
     }
 
     public function followers(){
