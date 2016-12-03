@@ -8,9 +8,9 @@ import MuiThemeProvider from '../../../node_modules/material-ui/styles/MuiThemeP
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
-
+import cookie from 'react-cookie'
 import FlatButton from 'material-ui/FlatButton';
-
+import $ from 'jquery'
 import s from './LoginCard.scss'
 
 
@@ -20,6 +20,22 @@ const buttonStyle = {
 };
 
 class LoginCard extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            test: 'test'
+        };
+    }
+
+    handleLogin(){
+        let username = this.refs.musername.input.value;
+        let password = this.refs.mpassword.input.value;
+        cookie.save('username', username);
+        cookie.save('login',1);
+        window.location.href = '/home';
+    }
+
     render(){
         return(
             <Paper className={s.card}>
@@ -27,19 +43,23 @@ class LoginCard extends Component{
                 <TextField
                     fullWidth={true}
                     hintText="username"
+                    ref="musername"
                 /><br />
                 <TextField
                     fullWidth={true}
                     type="password"
                     hintText="password"
+                    ref="mpassword"
                 /><br />
                 <RaisedButton
                     primary={true}
                     labelColor="#FFF"
-                    label="LOGIN"
+                    label="登录"
                     style={buttonStyle}
-                    fullWidth={true} />
-                <RaisedButton label="SIGN UP" style={buttonStyle} fullWidth={true} />
+                    fullWidth={true}
+                    onTouchTap = {this.handleLogin.bind(this)}
+                />
+                <RaisedButton label="注册" style={buttonStyle} fullWidth={true} />
             </Paper>
         );
     }

@@ -58,14 +58,7 @@ class GroupCenterLeftMenu extends Component{
                     <Tab
                         style={tabStyle}
                         label="我的" value="mine" >
-                        <div className={s.contentmy}>
-                            <MyGroupList
-                                group_name = {this.state.group_name}
-                            />
-                            <GroupInfoCard
-                                group_detail = {this.state.group_detail}
-                            />
-                        </div>
+
                     </Tab>
                     <Tab
                         style={tabStyle}

@@ -8,6 +8,8 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import $ from 'jquery'
+import Divider from 'material-ui/Divider';
+import s from './MyGroupList.scss'
 const labelStyle={
     color:'#9B9B9B'
 };
@@ -38,6 +40,7 @@ class MyGroupList extends Component{
                     <ListItem>
                         {name}
                     </ListItem>
+                    <Divider/>
                 </div>
             )
         });
@@ -61,16 +64,15 @@ class MyGroupList extends Component{
         ];
         return(
             <div>
-                <Paper>
-
-                    我的小组
+                <Paper className={s.content}>
+                    <p>我的小组</p>
+                    <Divider/>
                     <List>
+                        {this.renderGroupNameList()}
                         <RaisedButton
-                            backgroundColor="#965200"
+                            primary={true}
                             labelColor="#FFF"
-                            style={{margin:'8px 14px',
-                                width:'120px'}}
-                            keyboardFocused={true}
+                            style={{width:'100%'}}
                             onTouchTap={this.handleOpen}
                             label="创建小组"
                         />
@@ -80,12 +82,11 @@ class MyGroupList extends Component{
                             open={this.state.open}
                             onRequestClose={this.handleClose}
                         >
-
                         </Dialog>
-                        {this.renderGroupNameList()}
                     </List>
                 </Paper>
             </div>
+
 
         );
     }

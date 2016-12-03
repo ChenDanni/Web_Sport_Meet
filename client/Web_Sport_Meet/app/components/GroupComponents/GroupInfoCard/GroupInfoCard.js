@@ -18,10 +18,14 @@ class GroupInfoCard extends Component{
         if (this.props.group_detail.topics != undefined){
             return this.props.group_detail.topics.map(function(topic,i){
                 return (
-                    <TopicCard
-                        key = {i}
-                        topic_info = {topic}
-                    />
+                    <div>
+                        <TopicCard
+                            key = {i}
+                            topic_info = {topic}
+                        />
+                        <Divider/>
+                    </div>
+
                 )
             });
         }
@@ -30,10 +34,13 @@ class GroupInfoCard extends Component{
         if (this.props.group_detail.users != undefined){
             return this.props.group_detail.users.map(function(member,i){
                 return (
-                    <MemberCard
-                        key = {i}
-                        member_info = {member}
-                    />
+                    <div>
+                        <MemberCard
+                            key = {i}
+                            member_info = {member}
+                        />
+                        <Divider/>
+                    </div>
                 )
             });
         }
@@ -42,12 +49,17 @@ class GroupInfoCard extends Component{
         let detail = this.props.group_detail;
         return(
             <div>
-                <Paper>
+                <Paper className={s.container}>
                     <div className={s.group_title}>
-                        <Avatar src={detail.avatar}/>
-                        <p>{detail.groupname}</p>
-                        <p>创建者: {detail.creater}</p>
-                        <p>创建时间: {detail.createtime}</p>
+                        {/*<Avatar src={detail.avatar}/>*/}
+                        <Avatar src={require('../../../icons/avatar1.png')}/>
+                        <div className={s.title_info}>
+                            <p>{detail.groupname}</p>
+                            <div className={s.title_time}>
+                                <p>创建者: {detail.creater}</p>
+                                <p>创建时间: {detail.createtime}</p>
+                            </div>
+                        </div>
                     </div>
                     <Divider/>
                     <div className={s.group_info}>
@@ -55,32 +67,28 @@ class GroupInfoCard extends Component{
                         <p>Level.{detail.level}</p>
                         <p>累计步数: {detail.totalsteps}</p>
                     </div>
-                    <p>{detail.description}</p>
+                    <p className={s.description}>{detail.description}</p>
                     <Divider/>
-                    <div className={s.content}>
-                        <div>
-                            <p>帖子</p>
+                    <div >
+                        <div className={s.content}>
                             <div>
-                                {this.renderTopicList()}
-                            </div>
-                        </div>
-                        <div>
-                            <div className={s.member_title}>
-                                <p>排名</p>
-                                <p>成员</p>
-                                <p>步数</p>
+                                <p>帖子</p>
+                                <div>
+                                    {this.renderTopicList()}
+                                </div>
                             </div>
                             <div>
-                                {this.renderUserList()}
+                                <div className={s.member_title}>
+                                    <p>排名</p>
+                                    <p>成员</p>
+                                    <p>步数</p>
+                                </div>
+                                <div>
+                                    {this.renderUserList()}
+                                </div>
                             </div>
-
-
-
                         </div>
                     </div>
-
-
-
                 </Paper>
             </div>
         );

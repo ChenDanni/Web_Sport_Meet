@@ -9,8 +9,9 @@
 .content {
   display: flex;
   flex-direction:row;
-  justify-content: center;
+  //justify-content: flex-start;
   width: 960px;
+  flex-wrap: wrap;
 }
 
 .activities {
@@ -22,4 +23,5 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }

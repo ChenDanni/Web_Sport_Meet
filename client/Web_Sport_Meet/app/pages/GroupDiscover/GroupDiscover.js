@@ -10,8 +10,9 @@ import { Router, Route, Link } from 'react-router';
 import MyGroupList from '../../components/MyGroupList/MyGroupList'
 import GroupInfoCard from '../../components/GroupComponents/GroupInfoCard/GroupInfoCard'
 import FlatButton from 'material-ui/FlatButton';
+import GroupCard from '../../components/GroupComponents/GroupCard/GroupCard'
 import {newTheme} from '../../theme'
-import s from './GroupCenter.scss'
+import s from './GroupDiscover.scss'
 import $ from 'jquery'
 
 const linkStyle={
@@ -21,7 +22,7 @@ const linkStyle={
     verticalAlign:'button'
 };
 
-class GroupCenter extends Component{
+class GroupDiscover extends Component{
 
     constructor(props) {
         super(props);
@@ -65,16 +66,11 @@ class GroupCenter extends Component{
                     </div>
                     <div className={s.container}>
                         <div className={s.content}>
-                            <MyGroupList
-                                group_name = {this.state.group_name}
-                            />
-                            <GroupInfoCard
-                                group_detail = {this.state.group_detail}
-                            />
+                            <GroupCard/>
+                            <GroupCard/>
+                            <GroupCard/>
                         </div>
-
                     </div>
-
                 </div>
 
             </MuiThemeProvider>
@@ -82,4 +78,4 @@ class GroupCenter extends Component{
     }
 }
 
-export default GroupCenter
+export default GroupDiscover

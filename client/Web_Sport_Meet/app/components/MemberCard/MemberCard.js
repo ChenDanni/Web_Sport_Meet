@@ -15,7 +15,8 @@ class MemberCard extends Component {
         return(
             <div className={s.content}>
                 <p>{info.rank}</p>
-                <Avatar src={info.avatar}/>
+                {/*<Avatar src={info.avatar}/>*/}
+                <Avatar src={require('../../icons/avatar1.png')}/>
                 <p>{info.username}</p>
                 <p>{info.step}</p>
             </div>

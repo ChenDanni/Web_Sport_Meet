@@ -1,12 +1,22 @@
 .content{
   display: flex;
   flex-direction: row;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  width: 400px;
 }
 .topic_info{
   display: flex;
   flex-direction: column;
+  p {
+    margin:0 14px;
+  }
 }
 .footer{
   display: flex;
   flex-direction: row;
+  p {
+    color: #9B9B9B;
+    margin-top: 8px;
+  }
 }

@@ -13,7 +13,9 @@ class Search extends Component{
                     hintText="find something you like..."
                 />
                 <IconButton>
-                    <ActionSearch />
+                    <ActionSearch
+                        color='#ffffff'
+                    />
                 </IconButton>
             </div>
         );

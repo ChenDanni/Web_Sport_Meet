@@ -16,7 +16,8 @@ class HomeLeftInfo extends Component{
     render(){
         return(
             <Paper className={s.card}>
-
+                <p className={s.num}>46352723</p>
+                <p>累计步数</p>
             </Paper>
         );
     }

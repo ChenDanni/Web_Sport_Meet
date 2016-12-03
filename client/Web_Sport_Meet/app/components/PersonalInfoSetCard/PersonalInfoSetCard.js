@@ -52,7 +52,7 @@ class PersonalInfoSetCard extends Component{
                 /><br />
                 <RaisedButton
                     label="确认"
-                    backgroundColor="#965200"
+                    primary={true}
                     labelColor="#FFF"
                     style={buttonStyle}
                     fullWidth={true} />

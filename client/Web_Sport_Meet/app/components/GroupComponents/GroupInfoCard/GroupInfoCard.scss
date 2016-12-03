@@ -1,12 +1,54 @@
 .member_title {
   display: flex;
   flex-direction: row;
+  p {
+    margin-left: 14px;
+    margin-right: 20px;
+  }
 }
 .content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding-top: 24px;
 }
 .group_info {
   display: flex;
   flex-direction: row;
+  p {
+    margin-right: 16px;
+  }
+  margin-top: 24px;
+}
+.container{
+  width: 694px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+.group_title{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 24px;
+}
+
+.title_info {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0 14px;
+  }
+}
+.title_time{
+  display: flex;
+  flex-direction: row;
+  margin-top: 14px;
+  p {
+    margin:0 14px;
+    color: #9B9B9B;
+  }
+}
+.description{
+  line-height: 30px;
 }

@@ -86,7 +86,7 @@ class GroupController extends Controller {
         $membernum = 23;
         $level = 4;
         $totalstep = 324323;
-        $description = '这是一段小组介绍';
+        $description = '爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';
 
         $topics = $this->group_topics();
         $users = $this->group_members();

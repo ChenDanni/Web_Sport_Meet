@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import FlatButton from 'material-ui/FlatButton';
+import Avatar from 'material-ui/Avatar';
 import AvatarInfo from '../../AvatarInfo/AvatarInfo'
 
 import s from './GroupCard.scss'
@@ -21,6 +22,11 @@ const buttonStyle = {
         padding:'0'
     }
 };
+const subtitleStyle = {
+    fontSize: '14px',
+    color: '#9B9B9B',
+    marginTop: '8px'
+};
 
 class GroupCard extends Component{
     render(){
@@ -28,7 +34,16 @@ class GroupCard extends Component{
             <div className={s.card}>
                 <Card>
                     <div className={s.header}>
-                        <AvatarInfo/>
+                        {/*<AvatarInfo/>*/}
+                        <div className={s.avatar}>
+                            <Avatar
+                                size={40}
+                                src={require('../../../icons/start.jpg')}/>
+                            <div className={s.infos}>
+                                <p>au1 Lv.2</p>
+                                <p style={subtitleStyle}>2016-10-23 创建</p>
+                            </div>
+                        </div>
                     </div>
                     <Divider/>
                     <CardText className={s.text}>
@@ -43,7 +58,7 @@ class GroupCard extends Component{
                         <FlatButton
                             style={buttonStyle.button}
                             labelStyle={buttonStyle.labelStyle}
-                            label="退出" />
+                            label="加入" />
                     </div>
                 </Card>
             </div>

@@ -43,8 +43,6 @@ const style = {
 };
 
 class Header extends Component{
-
-
     render(){
         return(
             <div className={s.header}>
@@ -56,7 +54,7 @@ class Header extends Component{
 
                     </div>
                     <div className={s.info}>
-                        <p>ChenDanni</p>
+                        <p>chendanni</p>
                         <p>Lv. 3</p>
                     </div>
                     {/*<div>*/}

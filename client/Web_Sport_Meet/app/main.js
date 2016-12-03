@@ -21,6 +21,7 @@ import Followings from './pages/Followings/Followings'
 import Followers from './pages/Followers/Followers'
 import HistoryData from './pages/HistoryData/HistoryData'
 import GroupCenter from './pages/GroupCenter/GroupCenter'
+import GroupDiscover from './pages/GroupDiscover/GroupDiscover'
 import OthersHome from './pages/OthersHome/OthersHome'
 
 import './components/total.scss'
@@ -43,6 +44,7 @@ render((
         <Route path="/followers" components={Followers}/>
         <Route path="/history_data" components={HistoryData}/>
         <Route path="/groups_center" components={GroupCenter}/>
+        <Route path="/groups_discover" components={GroupDiscover}/>
         <Route path="/others_home" components={OthersHome}/>
     </Router>
 ),document.getElementById('root'));

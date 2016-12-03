@@ -1,4 +1,11 @@
 .content{
   display: flex;
   flex-direction: row;
+  width:250px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  p {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
 }

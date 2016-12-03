@@ -85,7 +85,7 @@ class ActivityController extends Controller {
         $user1['avg'] = $avg1;
 
         $avatar2 = 'ss';
-        $name2 = '陈danni';
+        $name2 = 'chendanni';
         $avg2 = '2321';
         $user2 = array();
         $user2['avatar'] = $avatar2;
@@ -118,7 +118,7 @@ class ActivityController extends Controller {
     public function my_join_act_detail(){
         $title = '跑步';
         $author = 'au1';
-        $description = '爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';;
+        $description = '爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧。爱跑步的少年聚集地,每天10km,坚持打卡~#百人百天#喜欢就来吧';
         $join = 2;
         $start = '2016-10-11';
         $end = '2016-12-11';

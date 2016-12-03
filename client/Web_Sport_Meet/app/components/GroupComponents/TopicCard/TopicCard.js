@@ -14,7 +14,9 @@ class TopicCard extends Component {
         console.log(info);
         return(
             <div className={s.content}>
-                <Avatar src={info.author_avatar}/>
+                {/*<Avatar src={info.author_avatar}/>*/}
+                <Avatar src={require('../../../icons/avatar1.png')}/>
+
                 <div className={s.topic_info}>
                     <p>{info.title}</p>
                     <div className={s.footer}>
